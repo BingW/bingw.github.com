@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Bing & KK]]></title>
-  <link href="http://BingW.github.com/Gen875/atom.xml" rel="self"/>
-  <link href="http://BingW.github.com/Gen875/"/>
-  <updated>2012-09-09T13:33:02-05:00</updated>
-  <id>http://BingW.github.com/Gen875/</id>
+  <link href="http://BingW.github.com/atom.xml" rel="self"/>
+  <link href="http://BingW.github.com/"/>
+  <updated>2012-09-09T13:44:19-05:00</updated>
+  <id>http://BingW.github.com/</id>
   <author>
     <name><![CDATA[BingW]]></name>
     <email><![CDATA[toaya.kase@gmail.com]]></email>
