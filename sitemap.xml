@@ -1,19 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://BingW.github.com/blog/2012/09/09/hello-world/</loc>
-        <lastmod>2012-09-09T13:46:55-05:00</lastmod>
-    </url>
-    <url>
         <loc>http://BingW.github.com/blog/2012/09/09/paul-alignment-assembly/</loc>
-        <lastmod>2012-09-09T14:22:52-05:00</lastmod>
+        <lastmod>2012-09-09T16:52:07-05:00</lastmod>
     </url>
     <url>
         <loc>http://BingW.github.com/blog/archives/</loc>
-        <lastmod>2012-09-09T14:22:52-05:00</lastmod>
+        <lastmod>2012-09-09T16:52:07-05:00</lastmod>
     </url>
     <url>
         <loc>http://BingW.github.com/</loc>
-        <lastmod>2012-09-09T14:22:52-05:00</lastmod>
+        <lastmod>2012-09-09T16:52:07-05:00</lastmod>
     </url>
 </urlset>

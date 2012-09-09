@@ -9,7 +9,7 @@
   <meta name="author" content="BingW">
 
   
-  <meta name="description" content="Sense From Sequence Reads: Methods for Alignment and Assembly Paul Flicek &amp; EAn Birney Abstruct review of alignment and assembly algorithms &hellip;">
+  <meta name="description" content="Sense From Sequence Reads: Methods for Alignment and Assembly Paul Flicek &amp; Ewan Birney Abstruct review of alignment and assembly algorithms &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -70,7 +70,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/09/09/paul-alignment-assembly/">Gen875_Note</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/09/09/paul-alignment-assembly/">Gen875 Reading</a></h1>
     
     
       <p class="meta">
@@ -95,7 +95,7 @@
 
   <div class="entry-content"><h3>Sense From Sequence Reads: Methods for Alignment and Assembly</h3>
 
-<p><em>Paul Flicek &amp; EAn Birney</em></p>
+<p><em>Paul Flicek &amp; Ewan Birney</em></p>
 
 <h4>Abstruct</h4>
 
@@ -103,49 +103,50 @@
 
 <h4>Background</h4>
 
-<ul>
-<li>de novo sequencing: longer reads</li>
-<li>resequencing: high coverage, paired-end reads</li>
-<li>mapping TF binding site/location of modified histones: <a href="http://en.wikipedia.org/wiki/Chromatin_immunoprecipitation">ChIP</a>, short reads</li>
-<li>DNase-seq: limited to only 20bp of informative sequence</li>
-</ul>
+<p>quality versus cost tradeoff:</p>
 
-</div>
-  
-  
+<pre><code>+ de novo sequencing: longer reads
++ resequencing: high coverage, paired-end reads
++ mapping TF binding site/location of modified histones: [ChIP][u1], short reads
++ DNase-seq: limited to only 20bp of informative sequence
+</code></pre>
 
+<p>Different error characteristics:</p>
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/09/hello-world/">Hello World</a></h1>
-    
-    
-      <p class="meta">
-        
+<pre><code>+ Roche 454:insertion or deletion errors during homopolymer runs
++ ABI SOLiD &amp; Illumina/Solexa: errors toward the end of the read
+</code></pre>
 
+<h4>Alignment</h4>
 
+<p>Alignment methods(tradeoff between speed and sensitivity):</p>
 
+<pre><code>+ hash table-based implementations
++ Burrows Wheeler transform(BWT)-based methods
+</code></pre>
 
+<p>Alignment procedure:</p>
 
+<pre><code>1. heuristic techniques
+2. accurate alignment alogrithms(Smith-Waterman)
+</code></pre>
 
+<h5>Hash-based alignment methods</h5>
 
+<p>Sepecially for short reads. methods include:</p>
 
-  
+<pre><code>+ [MAQ][8]
++ [SOPA][9]
++ Illumina's unpublished ELAND algorithm
+</code></pre>
 
+<p>These have recently been joined by:</p>
 
-<time datetime="2012-09-09T13:46:00-05:00" pubdate data-updated="true">Sep 9<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h1>Hello World</h1>
+<pre><code>+ [SHRiMP][10]
++ [ZOOM][11]
++ [BFAST][u2]
++ [MOSAIK][u3]
+</code></pre>
 </div>
   
   
@@ -166,11 +167,7 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/09/09/paul-alignment-assembly/">Gen875_Note</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/09/09/hello-world/">Hello World</a>
+        <a href="/blog/2012/09/09/paul-alignment-assembly/">Gen875 Reading</a>
       </li>
     
   </ul>
