@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Gen875 | Bing & KK]]></title>
   <link href="http://BingW.github.com/blog/categories/gen875/atom.xml" rel="self"/>
   <link href="http://BingW.github.com/"/>
-  <updated>2012-09-09T14:20:41-05:00</updated>
+  <updated>2012-09-09T14:22:09-05:00</updated>
   <id>http://BingW.github.com/</id>
   <author>
     <name><![CDATA[BingW]]></name>
@@ -24,14 +24,14 @@
 
 <h4>Abstruct</h4>
 
-<blockquote><p>review of alignment and assembly algorithms</p></blockquote>
+<p>review of alignment and assembly algorithms</p>
 
 <h4>Background</h4>
 
-<blockquote><p>de novo sequencing: longer reads
-resequencing: high coverage, paired-end reads
-mapping TF binding site/location of modified histones: <a href="http://en.wikipedia.org/wiki/Chromatin_immunoprecipitation">ChIP</a>, short reads
-DNase-seq: limited to only 20bp of informative sequence</p></blockquote>
+<p>+de novo sequencing: longer reads
++resequencing: high coverage, paired-end reads
++mapping TF binding site/location of modified histones: <a href="http://en.wikipedia.org/wiki/Chromatin_immunoprecipitation">ChIP</a>, short reads
++DNase-seq: limited to only 20bp of informative sequence</p>
 ]]></content>
   </entry>
   
