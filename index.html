@@ -103,50 +103,44 @@
 
 <h4>Background</h4>
 
-<p>quality versus cost tradeoff:</p>
-
-<pre><code>+ de novo sequencing: longer reads
+<p>quality versus cost tradeoff:
++ de novo sequencing: longer reads
 + resequencing: high coverage, paired-end reads
-+ mapping TF binding site/location of modified histones: [ChIP][u1], short reads
-+ DNase-seq: limited to only 20bp of informative sequence
-</code></pre>
++ mapping TF binding site/location of modified histones: <a href="http://en.wikipedia.org/wiki/Chromatin_immunoprecipitation">ChIP</a>, short reads
++ DNase-seq: limited to only 20bp of informative sequence</p>
 
-<p>Different error characteristics:</p>
-
-<pre><code>+ Roche 454:insertion or deletion errors during homopolymer runs
-+ ABI SOLiD &amp; Illumina/Solexa: errors toward the end of the read
-</code></pre>
+<p>Different error characteristics:
++ Roche 454:insertion or deletion errors during homopolymer runs
++ ABI SOLiD &amp; Illumina/Solexa: errors toward the end of the read</p>
 
 <h4>Alignment</h4>
 
-<p>Alignment methods(tradeoff between speed and sensitivity):</p>
+<p>Alignment methods(tradeoff between speed and sensitivity):
++ hash table-based implementations
++ Burrows Wheeler transform(BWT)-based methods</p>
 
-<pre><code>+ hash table-based implementations
-+ Burrows Wheeler transform(BWT)-based methods
-</code></pre>
-
-<p>Alignment procedure:</p>
-
-<pre><code>1. heuristic techniques
-2. accurate alignment alogrithms(Smith-Waterman)
-</code></pre>
+<p>Alignment procedure:
+1. heuristic techniques
+2. accurate alignment alogrithms(Smith-Waterman)</p>
 
 <h5>Hash-based alignment methods</h5>
 
-<p>Sepecially for short reads. methods include:</p>
+<p>Sepecially for short reads. methods include:
++ [MAQ][8]</p>
 
-<pre><code>+ [MAQ][8]
+<blockquote><p>from the first 28 bp of the read, MAQ program builds six hash tables corresponding
+to seeds of length 8 and weight 4 and then scans the reference genome against these
+hash tables. This technique ensures that all hits with two mismatches can be found,
+and more than half of those with three mismatches. Twenty hash tables would be required
+for MAQ to guarantee that all reads with three mismatches could be found.
 + [SOPA][9]
-+ Illumina's unpublished ELAND algorithm
-</code></pre>
++ Illumina&#8217;s unpublished ELAND algorithm</p></blockquote>
 
-<p>These have recently been joined by:</p>
-
-<pre><code>+ [SHRiMP][10]
+<p>These have recently been joined by:
++ [SHRiMP][10]
 + [ZOOM][11]
-+ [BFAST][u2]
-+ [MOSAIK][u3]
-</code></pre>
++ <a href="http://genome.ucla.edu/bfast/">BFAST</a>
++ <a href="http://bioinformatics.bc.edu/marthlab/Mosaik/">MOSAIK</a></p>
 </div>
   
   
