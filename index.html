@@ -144,13 +144,14 @@
 <p>Sepecially for short reads. methods include:</p>
 
 <ul>
-<li>[MAQ][8]
-  from the first 28 bp of the read, MAQ program builds six hash tables corresponding
+<li><p>[MAQ][8]:</p>
+
+<p>  from the first 28 bp of the read, MAQ program builds six hash tables corresponding
   to seeds of length 8 and weight 4 and then scans the reference genome against these
   hash tables. This technique ensures that all hits with two mismatches can be found,
   and more than half of those with three mismatches. Twenty hash tables would be required
-  for MAQ to guarantee that all reads with three mismatches could be found.</li>
-<li>[SOPA][9]</li>
+  for MAQ to guarantee that all reads with three mismatches could be found.</p></li>
+<li><p>[SOPA][9]</p></li>
 <li>Illumina&#8217;s unpublished ELAND algorithm</li>
 </ul>
 
