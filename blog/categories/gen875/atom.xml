@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Gen875 | Bing & KK]]></title>
   <link href="http://BingW.github.com/blog/categories/gen875/atom.xml" rel="self"/>
   <link href="http://BingW.github.com/"/>
-  <updated>2012-09-09T14:09:48-05:00</updated>
+  <updated>2012-09-09T14:16:24-05:00</updated>
   <id>http://BingW.github.com/</id>
   <author>
     <name><![CDATA[BingW]]></name>
@@ -14,13 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[paul alignment assembly]]></title>
+    <title type="html"><![CDATA[Sense from sequence reads: methods for alignment and assembly]]></title>
     <link href="http://BingW.github.com/blog/2012/09/09/paul-alignment-assembly/"/>
     <updated>2012-09-09T14:02:00-05:00</updated>
     <id>http://BingW.github.com/blog/2012/09/09/paul-alignment-assembly</id>
-    <content type="html"><![CDATA[<h3>Sense from sequence reads: methods for alignment and assembly</h3>
-
-<p><em>Paul Flicek &amp; EAn Birney</em></p>
+    <content type="html"><![CDATA[<p><em>Paul Flicek &amp; EAn Birney</em></p>
 
 <h4>Abstruct</h4>
 
@@ -28,10 +26,13 @@
 
 <h4>Background</h4>
 
-<p>de novo sequencing: longer reads
-resequencing: high coverage, paired-end reads
-mapping TF binding site/location of modified histones: <a href="ChIP">ChIP</a>, short reads
-DNase-seq: limited to only 20bp of informative sequence</p>
+<p>de novo sequencing: longer reads</p>
+
+<p>resequencing: high coverage, paired-end reads</p>
+
+<p>mapping TF binding site/location of modified histones: <a href="http://en.wikipedia.org/wiki/Chromatin_immunoprecipitation">ChIP</a>, short reads</p>
+
+<p>DNase-seq: limited to only 20bp of informative sequence</p>
 ]]></content>
   </entry>
   
