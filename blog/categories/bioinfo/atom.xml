@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Bioinfo | Bing & KK]]></title>
   <link href="http://BingW.github.com/blog/categories/bioinfo/atom.xml" rel="self"/>
   <link href="http://BingW.github.com/"/>
-  <updated>2012-09-09T16:57:59-05:00</updated>
+  <updated>2012-09-09T17:00:40-05:00</updated>
   <id>http://BingW.github.com/</id>
   <author>
     <name><![CDATA[BingW]]></name>
@@ -28,44 +28,68 @@
 
 <h4>Background</h4>
 
-<p>quality versus cost tradeoff:
-+ de novo sequencing: longer reads
-+ resequencing: high coverage, paired-end reads
-+ mapping TF binding site/location of modified histones: <a href="http://en.wikipedia.org/wiki/Chromatin_immunoprecipitation">ChIP</a>, short reads
-+ DNase-seq: limited to only 20bp of informative sequence</p>
+<p>quality versus cost tradeoff:</p>
 
-<p>Different error characteristics:
-+ Roche 454:insertion or deletion errors during homopolymer runs
-+ ABI SOLiD &amp; Illumina/Solexa: errors toward the end of the read</p>
+<ul>
+<li>de novo sequencing: longer reads</li>
+<li>resequencing: high coverage, paired-end reads</li>
+<li>mapping TF binding site/location of modified histones: <a href="http://en.wikipedia.org/wiki/Chromatin_immunoprecipitation">ChIP</a>, short reads</li>
+<li>DNase-seq: limited to only 20bp of informative sequence</li>
+</ul>
+
+
+<p>Different error characteristics:</p>
+
+<ul>
+<li>Roche 454:insertion or deletion errors during homopolymer runs</li>
+<li>ABI SOLiD &amp; Illumina/Solexa: errors toward the end of the read</li>
+</ul>
+
 
 <h4>Alignment</h4>
 
-<p>Alignment methods(tradeoff between speed and sensitivity):
-+ hash table-based implementations
-+ Burrows Wheeler transform(BWT)-based methods</p>
+<p>Alignment methods(tradeoff between speed and sensitivity):</p>
 
-<p>Alignment procedure:
-1. heuristic techniques
-2. accurate alignment alogrithms(Smith-Waterman)</p>
+<ul>
+<li>hash table-based implementations</li>
+<li>Burrows Wheeler transform(BWT)-based methods</li>
+</ul>
+
+
+<p>Alignment procedure:</p>
+
+<ol>
+<li>heuristic techniques</li>
+<li>accurate alignment alogrithms(Smith-Waterman)</li>
+</ol>
+
 
 <h5>Hash-based alignment methods</h5>
 
-<p>Sepecially for short reads. methods include:
-+ [MAQ][8]</p>
+<p>Sepecially for short reads. methods include:</p>
+
+<ul>
+<li>[MAQ][8]
 
 <blockquote><p>from the first 28 bp of the read, MAQ program builds six hash tables corresponding
 to seeds of length 8 and weight 4 and then scans the reference genome against these
 hash tables. This technique ensures that all hits with two mismatches can be found,
 and more than half of those with three mismatches. Twenty hash tables would be required
-for MAQ to guarantee that all reads with three mismatches could be found.
-+ [SOPA][9]
-+ Illumina's unpublished ELAND algorithm</p></blockquote>
+for MAQ to guarantee that all reads with three mismatches could be found.</p></blockquote></li>
+<li>[SOPA][9]</li>
+<li>Illumina's unpublished ELAND algorithm</li>
+</ul>
 
-<p>These have recently been joined by:
-+ [SHRiMP][10]
-+ [ZOOM][11]
-+ <a href="http://genome.ucla.edu/bfast/">BFAST</a>
-+ <a href="http://bioinformatics.bc.edu/marthlab/Mosaik/">MOSAIK</a></p>
+
+<p>These have recently been joined by:</p>
+
+<ul>
+<li>[SHRiMP][10]</li>
+<li>[ZOOM][11]</li>
+<li><a href="http://genome.ucla.edu/bfast/">BFAST</a></li>
+<li><a href="http://bioinformatics.bc.edu/marthlab/Mosaik/">MOSAIK</a></li>
+</ul>
+
 ]]></content>
   </entry>
   
