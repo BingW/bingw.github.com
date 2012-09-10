@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Bioinfo | Bing & KK]]></title>
   <link href="http://BingW.github.com/blog/categories/bioinfo/atom.xml" rel="self"/>
   <link href="http://BingW.github.com/"/>
-  <updated>2012-09-09T17:05:11-05:00</updated>
+  <updated>2012-09-10T00:43:18-05:00</updated>
   <id>http://BingW.github.com/</id>
   <author>
     <name><![CDATA[BingW]]></name>
@@ -71,24 +71,52 @@
 <ul>
 <li><p>[MAQ][8]:</p>
 
-<p>  from the first 28 bp of the read, MAQ program builds six hash tables corresponding
-  to seeds of length 8 and weight 4 and then scans the reference genome against these
-  hash tables. This technique ensures that all hits with two mismatches can be found,
-  and more than half of those with three mismatches. Twenty hash tables would be required
-  for MAQ to guarantee that all reads with three mismatches could be found.</p></li>
-<li><p>[SOPA][9]</p></li>
-<li>Illumina's unpublished ELAND algorithm</li>
+<p>  From the first 28 bp of the read, MAQ program builds 6 hash tables corresponding
+  to seeds of (length = 8, weight = 4). scans the reference genome against these
+  hash tables. This ensures that all hits with 2 mismatches can be found. 20 hash
+  tables required if get all 3 mismatches.</p></li>
+<li><p>[SOPA][9]:</p>
+
+<ol>
+<li></li>
+</ol>
+</li>
+<li><p>Illumina's unpublished ELAND algorithm</p></li>
 </ul>
 
 
 <p>These have recently been joined by:</p>
 
 <ul>
-<li>[SHRiMP][10]</li>
-<li>[ZOOM][11]</li>
-<li><a href="http://genome.ucla.edu/bfast/">BFAST</a></li>
-<li><a href="http://bioinformatics.bc.edu/marthlab/Mosaik/">MOSAIK</a></li>
+<li><p>[SHRiMP][10]:</p>
+
+<p>  use a [q-gram][13] approach, (require mutiple sapced seeds per read</p></li>
+<li><p>[ZOOM][11]:</p>
+
+<p>  manually constructed spaced seeds of weight 14 to enable the detection of up to 4    mismatches in 50-bp reads</p></li>
+<li><p><a href="http://genome.ucla.edu/bfast/">BFAST</a></p></li>
+<li><p><a href="http://bioinformatics.bc.edu/marthlab/Mosaik/">MOSAIK</a></p>
+
+<p>  hashes all positions in the reference genome and uses a 'jump database' to
+  efficiently locate information in the hash table and thus reduces memory
+  requirements by approximately two-thirds over a naive implementation.</p></li>
 </ul>
+
+
+<h5>Burrows-Wheeler Transform methods</h5>
+
+<p>use the FM index data structure, retains the suffix array's ability for rapid subsequence search. Much faster than their hash-based counterparts at the same sensitivity level</p>
+
+<ol>
+<li>the sequence order of the reference genome is modified using the BWT(reversible)</li>
+<li><p>the final index is created; it is then used for rapid read placement on the
+genome(memory-intensive)</p></li>
+<li><p>[BOWTIE][14]:</p>
+
+<p>  Reported 30-fold speed increase over hash-based MAQ</p></li>
+<li><p>[BWA][15]:</p></li>
+<li><p>[SOAP2][16]:</p></li>
+</ol>
 
 ]]></content>
   </entry>
