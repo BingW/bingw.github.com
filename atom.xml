@@ -4,7 +4,7 @@
   <title><![CDATA[Bing & KK]]></title>
   <link href="http://BingW.github.com/atom.xml" rel="self"/>
   <link href="http://BingW.github.com/"/>
-  <updated>2012-09-10T12:00:05-05:00</updated>
+  <updated>2012-09-10T12:03:13-05:00</updated>
   <id>http://BingW.github.com/</id>
   <author>
     <name><![CDATA[BingW]]></name>
@@ -118,7 +118,7 @@ genome(memory-intensive)</li>
 
 <h4>Assembly</h4>
 
-<p>![de Vruijin graph][paul_alignment.png]</p>
+<p>![de Vruijin graph][bingw.github.com/images/paul_alignment.png]</p>
 
 <ol>
 <li>Sequence at top represents the genome, which is then sampled using shotgun sequencing in base space with 7-bp reads.</li>
