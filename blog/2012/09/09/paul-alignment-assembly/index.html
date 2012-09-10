@@ -141,18 +141,13 @@
 <p>Sepecially for short reads. methods include:</p>
 
 <ul>
-<li><p>[MAQ][8]:</p>
+<li><p><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=18714091&amp;amp;dopt=Abstract">MAQ</a>:</p>
 
 <p>  From the first 28 bp of the read, MAQ program builds 6 hash tables corresponding
   to seeds of (length = 8, weight = 4). scans the reference genome against these
   hash tables. This ensures that all hits with 2 mismatches can be found. 20 hash
   tables required if get all 3 mismatches.</p></li>
-<li><p>[SOPA][9]:</p>
-
-<ol>
-<li></li>
-</ol>
-</li>
+<li><p><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=18227114&amp;amp;dopt=Abstract">SOPA</a></p></li>
 <li><p>Illumina&#8217;s unpublished ELAND algorithm</p></li>
 </ul>
 
@@ -160,10 +155,10 @@
 <p>These have recently been joined by:</p>
 
 <ul>
-<li><p>[SHRiMP][10]:</p>
+<li><p><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=19461883&amp;amp;dopt=Abstract">SHRiMP</a>:</p>
 
 <p>  use a [q-gram][13] approach, (require mutiple sapced seeds per read</p></li>
-<li><p>[ZOOM][11]:</p>
+<li><p><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=18684737&amp;amp;dopt=Abstract">ZOOM</a>:</p>
 
 <p>  manually constructed spaced seeds of weight 14 to enable the detection of up to 4    mismatches in 50-bp reads</p></li>
 <li><p><a href="http://genome.ucla.edu/bfast/">BFAST</a></p></li>
@@ -177,19 +172,43 @@
 
 <h5>Burrows-Wheeler Transform methods</h5>
 
-<p>use the FM index data structure, retains the suffix array&#8217;s ability for rapid subsequence search. Much faster than their hash-based counterparts at the same sensitivity level</p>
+<p>use the FM index data structure, retains the suffix array&#8217;s ability for rapid subsequence
+search. Much faster than their hash-based counterparts at the same sensitivity level.</p>
 
 <ol>
 <li>the sequence order of the reference genome is modified using the BWT(reversible)</li>
 <li><p>the final index is created; it is then used for rapid read placement on the
 genome(memory-intensive)</p></li>
-<li><p>[BOWTIE][14]:</p>
+<li><p><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=19261174&amp;amp;dopt=Abstract">BOWTIE</a>:</p>
 
 <p>  Reported 30-fold speed increase over hash-based MAQ</p></li>
-<li><p>[BWA][15]:</p></li>
-<li><p>[SOAP2][16]:</p></li>
+<li><p><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=19451168&amp;amp;dopt=Abstract">BWA</a></p></li>
+<li><p><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=19497933&amp;amp;dopt=Abstract">SOAP2</a></p></li>
 </ol>
 
+
+<h4>Assembly</h4>
+
+<p>![de Vruijin graph][http://www.nature.com/nmeth/journal/v6/n11s/fig_tab/nmeth.1376_F3.html]
+1. Sequence at top represents the genome, which is then sampled using shotgun sequencing in base space with 7-bp reads.
+2. the k-mers in the reads (4-mers in this example) are collected into nodes and the coverage at each node is recorded.
+3. he graph is simplified to combine nodes that are associated with the continuous linear stretches into single, larger nodes of various k-mer sizes.
+4. error correction removes the tips and bubbles that result from sequencing errors and creates a final graph structure that accurately and completely describes in the original genome sequence.</p>
+
+<ul>
+<li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=17908823&amp;amp;dopt=Abstract">SHARCGS</a></li>
+<li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=17893086&amp;amp;dopt=Abstract">VCAKE</a></li>
+<li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=18349386&amp;amp;dopt=Abstract">VELVET</a></li>
+<li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=18083777&amp;amp;dopt=Abstract">EULER-SR</a></li>
+<li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=18332092&amp;amp;dopt=Abstract">EDENA</a></li>
+<li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=19251739&amp;amp;dopt=Abstract">ABySS</a></li>
+<li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=18340039&amp;amp;dopt=Abstract">ALLPATHS</a></li>
+</ul>
+
+
+<h4>Disscusion</h4>
+
+<p>List of sequence alignment software: <a href="http://en.wikipedia.org/wiki/List_of_sequence_alignment_software">wiki</a>, <a href="http://seqanswers.com/forums/showthread.php?t=43">SEQanswers</a></p>
 </div>
 
 
