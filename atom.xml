@@ -4,7 +4,7 @@
   <title><![CDATA[Bing & KK]]></title>
   <link href="http://BingW.github.com/atom.xml" rel="self"/>
   <link href="http://BingW.github.com/"/>
-  <updated>2012-09-10T11:50:02-05:00</updated>
+  <updated>2012-09-10T11:52:48-05:00</updated>
   <id>http://BingW.github.com/</id>
   <author>
     <name><![CDATA[BingW]]></name>
@@ -87,7 +87,7 @@
 <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=18684737&amp;amp;dopt=Abstract">ZOOM</a>:
   manually constructed spaced seeds of weight 14 to enable the detection of up to 4    mismatches in 50-bp reads</li>
 <li><a href="http://genome.ucla.edu/bfast/">BFAST</a></li>
-<li><a href="http://bioinformatics.bc.edu/marthlab/Mosaik/">MOSAIK</a>
+<li><a href="http://bioinformatics.bc.edu/marthlab/Mosaik/">MOSAIK</a>:
   hashes all positions in the reference genome and uses a &#8216;jump database&#8217; to
   efficiently locate information in the hash table and thus reduces memory
   requirements by approximately two-thirds over a naive implementation.</li>
@@ -101,22 +101,34 @@ search. Much faster than their hash-based counterparts at the same sensitivity l
 
 <ol>
 <li>the sequence order of the reference genome is modified using the BWT(reversible)</li>
-<li><p>the final index is created; it is then used for rapid read placement on the
-genome(memory-intensive)</p></li>
-<li><p><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=19261174&amp;amp;dopt=Abstract">BOWTIE</a>:
-  Reported 30-fold speed increase over hash-based MAQ</p></li>
+<li>the final index is created; it is then used for rapid read placement on the
+genome(memory-intensive)</li>
+</ol>
+
+
+<p>softwares:</p>
+
+<ul>
+<li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=19261174&amp;amp;dopt=Abstract">BOWTIE</a>:
+  Reported 30-fold speed increase over hash-based MAQ</li>
 <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=19451168&amp;amp;dopt=Abstract">BWA</a></li>
 <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=19497933&amp;amp;dopt=Abstract">SOAP2</a></li>
-</ol>
+</ul>
 
 
 <h4>Assembly</h4>
 
-<p>![de Vruijin graph][http://www.nature.com/nmeth/journal/v6/n11s/fig_tab/nmeth.1376_F3.html]
-1. Sequence at top represents the genome, which is then sampled using shotgun sequencing in base space with 7-bp reads.
-2. the k-mers in the reads (4-mers in this example) are collected into nodes and the coverage at each node is recorded.
-3. he graph is simplified to combine nodes that are associated with the continuous linear stretches into single, larger nodes of various k-mer sizes.
-4. error correction removes the tips and bubbles that result from sequencing errors and creates a final graph structure that accurately and completely describes in the original genome sequence.</p>
+<p>![de Vruijin graph][http://www.nature.com/nmeth/journal/v6/n11s/fig_tab/nmeth.1376_F3.html]</p>
+
+<ol>
+<li>Sequence at top represents the genome, which is then sampled using shotgun sequencing in base space with 7-bp reads.</li>
+<li>the k-mers in the reads (4-mers in this example) are collected into nodes and the coverage at each node is recorded.</li>
+<li>he graph is simplified to combine nodes that are associated with the continuous linear stretches into single, larger nodes of various k-mer sizes.</li>
+<li>error correction removes the tips and bubbles that result from sequencing errors and creates a final graph structure that accurately and completely describes in the original genome sequence.</li>
+</ol>
+
+
+<p>softwares:</p>
 
 <ul>
 <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=17908823&amp;amp;dopt=Abstract">SHARCGS</a></li>
