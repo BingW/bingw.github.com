@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Gen875 | Bing & KK]]></title>
   <link href="http://BingW.github.com/blog/categories/gen875/atom.xml" rel="self"/>
   <link href="http://BingW.github.com/"/>
-  <updated>2012-09-10T11:57:24-05:00</updated>
+  <updated>2012-09-10T12:00:05-05:00</updated>
   <id>http://BingW.github.com/</id>
   <author>
     <name><![CDATA[BingW]]></name>
@@ -83,7 +83,7 @@
 
 <ul>
 <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=19461883&amp;amp;dopt=Abstract">SHRiMP</a>:
-  use a [q-gram][13] approach, (require mutiple sapced seeds per read</li>
+  use a <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=16597241&amp;amp;dopt=Abstract">q-gram</a> approach, (require mutiple sapced seeds per read</li>
 <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=18684737&amp;amp;dopt=Abstract">ZOOM</a>:
   manually constructed spaced seeds of weight 14 to enable the detection of up to 4    mismatches in 50-bp reads</li>
 <li><a href="http://genome.ucla.edu/bfast/">BFAST</a></li>
@@ -118,7 +118,7 @@ genome(memory-intensive)</li>
 
 <h4>Assembly</h4>
 
-<p>![de Vruijin graph][images/paul_alignment]</p>
+<p>![de Vruijin graph][paul_alignment.png]</p>
 
 <ol>
 <li>Sequence at top represents the genome, which is then sampled using shotgun sequencing in base space with 7-bp reads.</li>
