@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Gen875 | Bing & KK]]></title>
   <link href="http://BingW.github.com/blog/categories/gen875/atom.xml" rel="self"/>
   <link href="http://BingW.github.com/"/>
-  <updated>2012-09-10T12:08:48-05:00</updated>
+  <updated>2012-09-10T21:19:30-05:00</updated>
   <id>http://BingW.github.com/</id>
   <author>
     <name><![CDATA[BingW]]></name>
@@ -14,10 +14,109 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Gen875 Reading]]></title>
-    <link href="http://BingW.github.com/blog/2012/09/09/paul-alignment-assembly/"/>
+    <title type="html"><![CDATA[Short-read sequencing]]></title>
+    <link href="http://BingW.github.com/blog/2012/09/10/short-read-sequencing/"/>
+    <updated>2012-09-10T14:23:00-05:00</updated>
+    <id>http://BingW.github.com/blog/2012/09/10/short-read-sequencing</id>
+    <content type="html"><![CDATA[<h3>Sequencing and de novo assembly</h3>
+
+<p><a href="http://www.ncbi.nlm.nih.gov/pubmed/21307932">Sequencing technology</a>
+<img src="http://bingw.github.com/images/short_read_sequencing_t1.png" alt="Sequencing technology" /></p>
+
+<p>concept: mate pair VS paired end</p>
+
+<h4>The Process:</h4>
+
+<ol>
+<li>Choose sequencing platform</li>
+<li>Make DNA</li>
+<li>Prepare Library</li>
+<li>sequence Run</li>
+<li>primary Analysis Pipeline
+ Converts image files (Tb) to sequences (100's Gb).(inreversbale)</li>
+<li>Obtain Sequence Reads</li>
+</ol>
+
+
+<h4>Sequence quality:</h4>
+
+<p>Phred Score VS accuracy
+* 10 ==> 90%
+* 20 ==> 99%
+* 30 ==> 99.9%
+* 40 ==> 99.99%
+* 50 ==> 99.999%</p>
+
+<h4>Format:</h4>
+
+<p>different identifier for phred[wiki][http://en.wikipedia.org/wiki/FASTQ_format]</p>
+
+<p>A software for this: [FastQC][http://www.bioinformatics.babraham.ac.uk/projects/fastqc/]</p>
+
+<h4>Genome-scale Sequence Analysis</h4>
+
+<ul>
+<li><strong>De nove assembly</strong></li>
+<li>Templated assembly</li>
+<li>Read mapping or alignment to a reference genome</li>
+</ul>
+
+
+<h4>Assemblers</h4>
+
+<p>overlap graph assemblers:</p>
+
+<ul>
+<li>Screen out known repeats and set them aside for later</li>
+<li>Infer repetitiveness based on coverage</li>
+<li>First assemble unambiguous overlaps, then resolve repeats using mate pairs</li>
+</ul>
+
+
+<p>De Bruijn K-mers assemblers problems:</p>
+
+<ul>
+<li>Require large amount of memory to store graph</li>
+<li>Not as easy to parallelize as overlap assemblers</li>
+</ul>
+
+
+<h4>How many clones/reads do we need?</h4>
+
+<p>Number of Contigs = $N \cdot e<sup>{-frac{LN}{G}</sup> \cdot (1-frac{T}{L})}$</p>
+
+<p>Concept of N50</p>
+
+<p>Predict VS Real data</p>
+
+<h4>Gap Closure Strategies</h4>
+
+<ul>
+<li>Primer walk to sequence the rest of linking clones that span a scaffold gap</li>
+<li>Primer walk off clones at the ends of contigs for which there is no linking information</li>
+<li>PCR based on your best guess at contig order (comparison to other closely related genomes, predicted genes at the end of genomes, anything else you can come up with)</li>
+<li>Combinatorial PCR with primers designed at the end of each contig</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Schatz2010_AssemblyReview]]></title>
+    <link href="http://BingW.github.com/blog/2012/09/10/schatz2010-assemblyreview/"/>
+    <updated>2012-09-10T12:13:00-05:00</updated>
+    <id>http://BingW.github.com/blog/2012/09/10/schatz2010-assemblyreview</id>
+    <content type="html"><![CDATA[<h3>Assembly of large genomes using second-generation sequencing</h3>
+
+<p><em>Michael C. Schatz, Arthur L. Delcher and Steven L. Salzberg</em></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[FlicekBirney2009-NGSReview]]></title>
+    <link href="http://BingW.github.com/blog/2012/09/09/FlicekBirney2009-NGSReview/"/>
     <updated>2012-09-09T14:02:00-05:00</updated>
-    <id>http://BingW.github.com/blog/2012/09/09/paul-alignment-assembly</id>
+    <id>http://BingW.github.com/blog/2012/09/09/FlicekBirney2009-NGSReview</id>
     <content type="html"><![CDATA[<h3>Sense From Sequence Reads: Methods for Alignment and Assembly</h3>
 
 <p><em>Paul Flicek &amp; Ewan Birney</em></p>
@@ -118,7 +217,7 @@ genome(memory-intensive)</li>
 
 <h4>Assembly</h4>
 
-<p><img src="http://bingw.github.com/images/paul_alignment.png" alt="de Vruijin graph" /></p>
+<p><img src="http://bingw.github.com/images/paul_alignment.png" alt="de Bruijn graph" /></p>
 
 <ol>
 <li>Sequence at top represents the genome, which is then sampled using shotgun sequencing in base space with 7-bp reads.</li>
