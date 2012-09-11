@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Gen875 | Bing & KK]]></title>
   <link href="http://BingW.github.com/blog/categories/gen875/atom.xml" rel="self"/>
   <link href="http://BingW.github.com/"/>
-  <updated>2012-09-10T21:28:48-05:00</updated>
+  <updated>2012-09-10T21:36:32-05:00</updated>
   <id>http://BingW.github.com/</id>
   <author>
     <name><![CDATA[BingW]]></name>
@@ -40,18 +40,22 @@
 
 <h4>Sequence quality:</h4>
 
-<p>Phred Score VS accuracy
-+ 10 ==> 90%
-+ 20 ==> 99%
-+ 30 ==> 99.9%
-+ 40 ==> 99.99%
-+ 50 ==> 99.999%</p>
+<p>Phred Score VS accuracy:</p>
+
+<ul>
+<li>10 ==> 90%</li>
+<li>20 ==> 99%</li>
+<li>30 ==> 99.9%</li>
+<li>40 ==> 99.99%</li>
+<li>50 ==> 99.999%</li>
+</ul>
+
 
 <h4>Format:</h4>
 
-<p>different identifier for phred[wiki][http://en.wikipedia.org/wiki/FASTQ_format]</p>
+<p>different identifier for phred<a href="http://en.wikipedia.org/wiki/FASTQ_format">wiki</a></p>
 
-<p>A software for this: [FastQC][http://www.bioinformatics.babraham.ac.uk/projects/fastqc/]</p>
+<p>A software for this<a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a></p>
 
 <h4>Genome-scale Sequence Analysis</h4>
 
@@ -84,6 +88,31 @@
 <h4>How many clones/reads do we need?</h4>
 
 <p>Number of Contigs = $N \cdot e<sup>{-\frac{LN}{G}</sup> \cdot (1-\frac{T}{L})}$</p>
+
+<p>$\exp(-\frac{x<sup>2}{2})$</sup></p>
+
+<p>$$
+\begin{align*}
+  &amp; \phi(x,y) = \phi \left(\sum<em>{i=1}<sup>n</sup> x_ie_i, \sum</em>{j=1}<sup>n</sup> y_je_j \right)
+  = \sum<em>{i=1}<sup>n</sup> \sum</em>{j=1}<sup>n</sup> x_i y_j \phi(e_i, e_j) = \
+  &amp; (x_1, \ldots, x_n) \left( \begin{array}{ccc}</p>
+
+<pre><code>  \phi(e_1, e_1) &amp; \cdots &amp; \phi(e_1, e_n) \\
+  \vdots &amp; \ddots &amp; \vdots \\
+  \phi(e_n, e_1) &amp; \cdots &amp; \phi(e_n, e_n)
+\end{array} \right)
+</code></pre>
+
+<p>  \left( \begin{array}{c}</p>
+
+<pre><code>  y_1 \\
+  \vdots \\
+  y_n
+\end{array} \right)
+</code></pre>
+
+<p>\end{align*}
+$$</p>
 
 <p>Concept of N50</p>
 
