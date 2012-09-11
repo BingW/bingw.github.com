@@ -4,7 +4,7 @@
   <title><![CDATA[Bing & KK]]></title>
   <link href="http://BingW.github.com/atom.xml" rel="self"/>
   <link href="http://BingW.github.com/"/>
-  <updated>2012-09-10T21:22:40-05:00</updated>
+  <updated>2012-09-10T21:28:48-05:00</updated>
   <id>http://BingW.github.com/</id>
   <author>
     <name><![CDATA[BingW]]></name>
@@ -83,7 +83,7 @@
 
 <h4>How many clones/reads do we need?</h4>
 
-<p>Number of Contigs = \$N \cdot e<sup>{-frac{LN}{G}</sup> \cdot (1-frac{T}{L})}\$</p>
+<p>Number of Contigs = $N \cdot e<sup>{-\frac{LN}{G}</sup> \cdot (1-\frac{T}{L})}$</p>
 
 <p>Concept of N50</p>
 
