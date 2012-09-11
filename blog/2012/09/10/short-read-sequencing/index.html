@@ -9,9 +9,7 @@
   <meta name="author" content="BingW">
 
   
-  <meta name="description" content="Sequencing and de novo assembly Sequencing technology concept: mate pair VS paired end The Process: Choose sequencing platform
-Make DNA
-Prepare &hellip;">
+  <meta name="description" content="Sequencing and de novo assembly Sequencing technology concept: mate pair VS paired end The Process: Choose sequencing platform Make DNA Prepare &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -123,113 +121,102 @@ Prepare &hellip;">
   </header>
 
 
-<div class="entry-content"><h3>Sequencing and de novo assembly</h3>
+<div class="entry-content"><h3 id="sequencing-and-de-novo-assembly">Sequencing and de novo assembly</h3>
 
 <p><a href="http://www.ncbi.nlm.nih.gov/pubmed/21307932">Sequencing technology</a>
 <img src="http://bingw.github.com/images/short_read_sequencing_t1.png" alt="Sequencing technology" /></p>
 
 <p>concept: mate pair VS paired end</p>
 
-<h4>The Process:</h4>
-
+<h4 id="the-process">The Process:</h4>
 <ol>
-<li>Choose sequencing platform</li>
-<li>Make DNA</li>
-<li>Prepare Library</li>
-<li>sequence Run</li>
-<li>primary Analysis Pipeline
- Converts image files (Tb) to sequences (100&#8217;s Gb).(inreversbale)</li>
-<li>Obtain Sequence Reads</li>
+  <li>Choose sequencing platform</li>
+  <li>Make DNA</li>
+  <li>Prepare Library</li>
+  <li>sequence Run</li>
+  <li>primary Analysis Pipeline
+ Converts image files (Tb) to sequences (100’s Gb).(inreversbale)</li>
+  <li>Obtain Sequence Reads</li>
 </ol>
 
-
-<h4>Sequence quality:</h4>
+<h4 id="sequence-quality">Sequence quality:</h4>
 
 <p>Phred Score VS accuracy:</p>
 
 <ul>
-<li>10 ==> 90%</li>
-<li>20 ==> 99%</li>
-<li>30 ==> 99.9%</li>
-<li>40 ==> 99.99%</li>
-<li>50 ==> 99.999%</li>
+  <li>10 ==&gt; 90%</li>
+  <li>20 ==&gt; 99%</li>
+  <li>30 ==&gt; 99.9%</li>
+  <li>40 ==&gt; 99.99%</li>
+  <li>50 ==&gt; 99.999%</li>
 </ul>
 
-
-<h4>Format:</h4>
+<h4 id="format">Format:</h4>
 
 <p>different identifier for phred<a href="http://en.wikipedia.org/wiki/FASTQ_format">wiki</a></p>
 
 <p>A software for this<a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a></p>
 
-<h4>Genome-scale Sequence Analysis</h4>
+<h4 id="genome-scale-sequence-analysis">Genome-scale Sequence Analysis</h4>
 
 <ul>
-<li><strong>De nove assembly</strong></li>
-<li>Templated assembly</li>
-<li>Read mapping or alignment to a reference genome</li>
+  <li><strong>De nove assembly</strong></li>
+  <li>Templated assembly</li>
+  <li>Read mapping or alignment to a reference genome</li>
 </ul>
 
-
-<h4>Assemblers</h4>
+<h4 id="assemblers">Assemblers</h4>
 
 <p>overlap graph assemblers:</p>
 
 <ul>
-<li>Screen out known repeats and set them aside for later</li>
-<li>Infer repetitiveness based on coverage</li>
-<li>First assemble unambiguous overlaps, then resolve repeats using mate pairs</li>
+  <li>Screen out known repeats and set them aside for later</li>
+  <li>Infer repetitiveness based on coverage</li>
+  <li>First assemble unambiguous overlaps, then resolve repeats using mate pairs</li>
 </ul>
-
 
 <p>De Bruijn K-mers assemblers problems:</p>
 
 <ul>
-<li>Require large amount of memory to store graph</li>
-<li>Not as easy to parallelize as overlap assemblers</li>
+  <li>Require large amount of memory to store graph</li>
+  <li>Not as easy to parallelize as overlap assemblers</li>
 </ul>
 
+<h4 id="how-many-clonesreads-do-we-need">How many clones/reads do we need?</h4>
 
-<h4>How many clones/reads do we need?</h4>
+<p>Number of Contigs = $N \cdot e^{-\frac{LN}{G} \cdot (1-\frac{T}{L})}$</p>
 
-<p>Number of Contigs = $N \cdot e<sup>{-\frac{LN}{G}</sup> \cdot (1-\frac{T}{L})}$</p>
+<p>$\exp(-\frac{x^2}{2})$</p>
 
-<p>$\exp(-\frac{x<sup>2}{2})$</sup></p>
+<script type="math/tex; mode=display">% <![CDATA[
 
-<p>$$
 \begin{align*}
-  &amp; \phi(x,y) = \phi \left(\sum<em>{i=1}<sup>n</sup> x_ie_i, \sum</em>{j=1}<sup>n</sup> y_je_j \right)
-  = \sum<em>{i=1}<sup>n</sup> \sum</em>{j=1}<sup>n</sup> x_i y_j \phi(e_i, e_j) = \
-  &amp; (x_1, \ldots, x_n) \left( \begin{array}{ccc}</p>
-
-<pre><code>  \phi(e_1, e_1) &amp; \cdots &amp; \phi(e_1, e_n) \\
-  \vdots &amp; \ddots &amp; \vdots \\
-  \phi(e_n, e_1) &amp; \cdots &amp; \phi(e_n, e_n)
-\end{array} \right)
-</code></pre>
-
-<p>  \left( \begin{array}{c}</p>
-
-<pre><code>  y_1 \\
-  \vdots \\
-  y_n
-\end{array} \right)
-</code></pre>
-
-<p>\end{align*}
-$$</p>
+  & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
+  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
+  & (x_1, \ldots, x_n) \left( \begin{array}{ccc}
+      \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
+      \vdots & \ddots & \vdots \\
+      \phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
+    \end{array} \right)
+  \left( \begin{array}{c}
+      y_1 \\
+      \vdots \\
+      y_n
+    \end{array} \right)
+\end{align*}
+ %]]></script>
 
 <p>Concept of N50</p>
 
 <p>Predict VS Real data</p>
 
-<h4>Gap Closure Strategies</h4>
+<h4 id="gap-closure-strategies">Gap Closure Strategies</h4>
 
 <ul>
-<li>Primer walk to sequence the rest of linking clones that span a scaffold gap</li>
-<li>Primer walk off clones at the ends of contigs for which there is no linking information</li>
-<li>PCR based on your best guess at contig order (comparison to other closely related genomes, predicted genes at the end of genomes, anything else you can come up with)</li>
-<li>Combinatorial PCR with primers designed at the end of each contig</li>
+  <li>Primer walk to sequence the rest of linking clones that span a scaffold gap</li>
+  <li>Primer walk off clones at the ends of contigs for which there is no linking information</li>
+  <li>PCR based on your best guess at contig order (comparison to other closely related genomes, predicted genes at the end of genomes, anything else you can come up with)</li>
+  <li>Combinatorial PCR with primers designed at the end of each contig</li>
 </ul>
 
 </div>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Gen875 | Bing & KK]]></title>
   <link href="http://BingW.github.com/blog/categories/gen875/atom.xml" rel="self"/>
   <link href="http://BingW.github.com/"/>
-  <updated>2012-09-10T21:36:32-05:00</updated>
+  <updated>2012-09-10T21:49:30-05:00</updated>
   <id>http://BingW.github.com/</id>
   <author>
     <name><![CDATA[BingW]]></name>
@@ -18,113 +18,102 @@
     <link href="http://BingW.github.com/blog/2012/09/10/short-read-sequencing/"/>
     <updated>2012-09-10T14:23:00-05:00</updated>
     <id>http://BingW.github.com/blog/2012/09/10/short-read-sequencing</id>
-    <content type="html"><![CDATA[<h3>Sequencing and de novo assembly</h3>
+    <content type="html"><![CDATA[<h3 id="sequencing-and-de-novo-assembly">Sequencing and de novo assembly</h3>
 
 <p><a href="http://www.ncbi.nlm.nih.gov/pubmed/21307932">Sequencing technology</a>
 <img src="http://bingw.github.com/images/short_read_sequencing_t1.png" alt="Sequencing technology" /></p>
 
 <p>concept: mate pair VS paired end</p>
 
-<h4>The Process:</h4>
-
+<h4 id="the-process">The Process:</h4>
 <ol>
-<li>Choose sequencing platform</li>
-<li>Make DNA</li>
-<li>Prepare Library</li>
-<li>sequence Run</li>
-<li>primary Analysis Pipeline
- Converts image files (Tb) to sequences (100's Gb).(inreversbale)</li>
-<li>Obtain Sequence Reads</li>
+  <li>Choose sequencing platform</li>
+  <li>Make DNA</li>
+  <li>Prepare Library</li>
+  <li>sequence Run</li>
+  <li>primary Analysis Pipeline
+ Converts image files (Tb) to sequences (100’s Gb).(inreversbale)</li>
+  <li>Obtain Sequence Reads</li>
 </ol>
 
-
-<h4>Sequence quality:</h4>
+<h4 id="sequence-quality">Sequence quality:</h4>
 
 <p>Phred Score VS accuracy:</p>
 
 <ul>
-<li>10 ==> 90%</li>
-<li>20 ==> 99%</li>
-<li>30 ==> 99.9%</li>
-<li>40 ==> 99.99%</li>
-<li>50 ==> 99.999%</li>
+  <li>10 ==&gt; 90%</li>
+  <li>20 ==&gt; 99%</li>
+  <li>30 ==&gt; 99.9%</li>
+  <li>40 ==&gt; 99.99%</li>
+  <li>50 ==&gt; 99.999%</li>
 </ul>
 
-
-<h4>Format:</h4>
+<h4 id="format">Format:</h4>
 
 <p>different identifier for phred<a href="http://en.wikipedia.org/wiki/FASTQ_format">wiki</a></p>
 
 <p>A software for this<a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a></p>
 
-<h4>Genome-scale Sequence Analysis</h4>
+<h4 id="genome-scale-sequence-analysis">Genome-scale Sequence Analysis</h4>
 
 <ul>
-<li><strong>De nove assembly</strong></li>
-<li>Templated assembly</li>
-<li>Read mapping or alignment to a reference genome</li>
+  <li><strong>De nove assembly</strong></li>
+  <li>Templated assembly</li>
+  <li>Read mapping or alignment to a reference genome</li>
 </ul>
 
-
-<h4>Assemblers</h4>
+<h4 id="assemblers">Assemblers</h4>
 
 <p>overlap graph assemblers:</p>
 
 <ul>
-<li>Screen out known repeats and set them aside for later</li>
-<li>Infer repetitiveness based on coverage</li>
-<li>First assemble unambiguous overlaps, then resolve repeats using mate pairs</li>
+  <li>Screen out known repeats and set them aside for later</li>
+  <li>Infer repetitiveness based on coverage</li>
+  <li>First assemble unambiguous overlaps, then resolve repeats using mate pairs</li>
 </ul>
-
 
 <p>De Bruijn K-mers assemblers problems:</p>
 
 <ul>
-<li>Require large amount of memory to store graph</li>
-<li>Not as easy to parallelize as overlap assemblers</li>
+  <li>Require large amount of memory to store graph</li>
+  <li>Not as easy to parallelize as overlap assemblers</li>
 </ul>
 
+<h4 id="how-many-clonesreads-do-we-need">How many clones/reads do we need?</h4>
 
-<h4>How many clones/reads do we need?</h4>
+<p>Number of Contigs = $N \cdot e^{-\frac{LN}{G} \cdot (1-\frac{T}{L})}$</p>
 
-<p>Number of Contigs = $N \cdot e<sup>{-\frac{LN}{G}</sup> \cdot (1-\frac{T}{L})}$</p>
+<p>$\exp(-\frac{x^2}{2})$</p>
 
-<p>$\exp(-\frac{x<sup>2}{2})$</sup></p>
+<script type="math/tex; mode=display">% &lt;![CDATA[
 
-<p>$$
 \begin{align*}
-  &amp; \phi(x,y) = \phi \left(\sum<em>{i=1}<sup>n</sup> x_ie_i, \sum</em>{j=1}<sup>n</sup> y_je_j \right)
-  = \sum<em>{i=1}<sup>n</sup> \sum</em>{j=1}<sup>n</sup> x_i y_j \phi(e_i, e_j) = \
-  &amp; (x_1, \ldots, x_n) \left( \begin{array}{ccc}</p>
-
-<pre><code>  \phi(e_1, e_1) &amp; \cdots &amp; \phi(e_1, e_n) \\
-  \vdots &amp; \ddots &amp; \vdots \\
-  \phi(e_n, e_1) &amp; \cdots &amp; \phi(e_n, e_n)
-\end{array} \right)
-</code></pre>
-
-<p>  \left( \begin{array}{c}</p>
-
-<pre><code>  y_1 \\
-  \vdots \\
-  y_n
-\end{array} \right)
-</code></pre>
-
-<p>\end{align*}
-$$</p>
+  & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
+  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
+  & (x_1, \ldots, x_n) \left( \begin{array}{ccc}
+      \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
+      \vdots & \ddots & \vdots \\
+      \phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
+    \end{array} \right)
+  \left( \begin{array}{c}
+      y_1 \\
+      \vdots \\
+      y_n
+    \end{array} \right)
+\end{align*}
+ %]]&gt;</script>
 
 <p>Concept of N50</p>
 
 <p>Predict VS Real data</p>
 
-<h4>Gap Closure Strategies</h4>
+<h4 id="gap-closure-strategies">Gap Closure Strategies</h4>
 
 <ul>
-<li>Primer walk to sequence the rest of linking clones that span a scaffold gap</li>
-<li>Primer walk off clones at the ends of contigs for which there is no linking information</li>
-<li>PCR based on your best guess at contig order (comparison to other closely related genomes, predicted genes at the end of genomes, anything else you can come up with)</li>
-<li>Combinatorial PCR with primers designed at the end of each contig</li>
+  <li>Primer walk to sequence the rest of linking clones that span a scaffold gap</li>
+  <li>Primer walk off clones at the ends of contigs for which there is no linking information</li>
+  <li>PCR based on your best guess at contig order (comparison to other closely related genomes, predicted genes at the end of genomes, anything else you can come up with)</li>
+  <li>Combinatorial PCR with primers designed at the end of each contig</li>
 </ul>
 
 ]]></content>
@@ -135,9 +124,10 @@ $$</p>
     <link href="http://BingW.github.com/blog/2012/09/10/schatz2010-assemblyreview/"/>
     <updated>2012-09-10T12:13:00-05:00</updated>
     <id>http://BingW.github.com/blog/2012/09/10/schatz2010-assemblyreview</id>
-    <content type="html"><![CDATA[<h3>Assembly of large genomes using second-generation sequencing</h3>
+    <content type="html"><![CDATA[<h3 id="assembly-of-large-genomes-using-second-generation-sequencing">Assembly of large genomes using second-generation sequencing</h3>
 
 <p><em>Michael C. Schatz, Arthur L. Delcher and Steven L. Salzberg</em></p>
+
 ]]></content>
   </entry>
   
@@ -146,132 +136,123 @@ $$</p>
     <link href="http://BingW.github.com/blog/2012/09/09/FlicekBirney2009-NGSReview/"/>
     <updated>2012-09-09T14:02:00-05:00</updated>
     <id>http://BingW.github.com/blog/2012/09/09/FlicekBirney2009-NGSReview</id>
-    <content type="html"><![CDATA[<h3>Sense From Sequence Reads: Methods for Alignment and Assembly</h3>
+    <content type="html"><![CDATA[<h3 id="sense-from-sequence-reads-methods-for-alignment-and-assembly">Sense From Sequence Reads: Methods for Alignment and Assembly</h3>
 
 <p><em>Paul Flicek &amp; Ewan Birney</em></p>
 
-<h4>Abstruct</h4>
+<h4 id="abstruct">Abstruct</h4>
 
 <p>review of alignment and assembly algorithms</p>
 
-<h4>Background</h4>
+<h4 id="background">Background</h4>
 
 <p>quality versus cost tradeoff:</p>
 
 <ul>
-<li>de novo sequencing: longer reads</li>
-<li>resequencing: high coverage, paired-end reads</li>
-<li>mapping TF binding site/location of modified histones: <a href="http://en.wikipedia.org/wiki/Chromatin_immunoprecipitation">ChIP</a>, short reads</li>
-<li>DNase-seq: limited to only 20bp of informative sequence</li>
+  <li>de novo sequencing: longer reads</li>
+  <li>resequencing: high coverage, paired-end reads</li>
+  <li>mapping TF binding site/location of modified histones: <a href="http://en.wikipedia.org/wiki/Chromatin_immunoprecipitation">ChIP</a>, short reads</li>
+  <li>DNase-seq: limited to only 20bp of informative sequence</li>
 </ul>
 
-
-<p>Different error characteristics:</p>
+<p>Different error characteristics: </p>
 
 <ul>
-<li>Roche 454:insertion or deletion errors during homopolymer runs</li>
-<li>ABI SOLiD &amp; Illumina/Solexa: errors toward the end of the read</li>
+  <li>Roche 454:insertion or deletion errors during homopolymer runs</li>
+  <li>ABI SOLiD &amp; Illumina/Solexa: errors toward the end of the read</li>
 </ul>
 
-
-<h4>Alignment</h4>
+<h4 id="alignment">Alignment</h4>
 
 <p>Alignment methods(tradeoff between speed and sensitivity):</p>
 
 <ul>
-<li>hash table-based implementations</li>
-<li>Burrows Wheeler transform(BWT)-based methods</li>
+  <li>hash table-based implementations</li>
+  <li>Burrows Wheeler transform(BWT)-based methods</li>
 </ul>
-
 
 <p>Alignment procedure:</p>
 
 <ol>
-<li>heuristic techniques</li>
-<li>accurate alignment alogrithms(Smith-Waterman)</li>
+  <li>heuristic techniques</li>
+  <li>accurate alignment alogrithms(Smith-Waterman)</li>
 </ol>
 
-
-<h5>Hash-based alignment methods</h5>
+<h5 id="hash-based-alignment-methods">Hash-based alignment methods</h5>
 
 <p>Sepecially for short reads. methods include:</p>
 
 <ul>
-<li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=18714091&amp;amp;dopt=Abstract">MAQ</a>:
-  From the first 28 bp of the read, MAQ program builds 6 hash tables corresponding
-  to seeds of (length = 8, weight = 4). scans the reference genome against these
-  hash tables. This ensures that all hits with 2 mismatches can be found. 20 hash
+  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=18714091&amp;dopt=Abstract">MAQ</a>:
+  From the first 28 bp of the read, MAQ program builds 6 hash tables corresponding 
+  to seeds of (length = 8, weight = 4). scans the reference genome against these 
+  hash tables. This ensures that all hits with 2 mismatches can be found. 20 hash 
   tables required if get all 3 mismatches.</li>
-<li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=18227114&amp;amp;dopt=Abstract">SOPA</a></li>
-<li>Illumina's unpublished ELAND algorithm</li>
+  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=18227114&amp;dopt=Abstract">SOPA</a></li>
+  <li>Illumina’s unpublished ELAND algorithm</li>
 </ul>
-
 
 <p>These have recently been joined by:</p>
 
 <ul>
-<li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=19461883&amp;amp;dopt=Abstract">SHRiMP</a>:
-  use a <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=16597241&amp;amp;dopt=Abstract">q-gram</a> approach, (require mutiple sapced seeds per read</li>
-<li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=18684737&amp;amp;dopt=Abstract">ZOOM</a>:
+  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=19461883&amp;dopt=Abstract">SHRiMP</a>:
+  use a <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=16597241&amp;dopt=Abstract">q-gram</a> approach, (require mutiple sapced seeds per read</li>
+  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=18684737&amp;dopt=Abstract">ZOOM</a>:
   manually constructed spaced seeds of weight 14 to enable the detection of up to 4    mismatches in 50-bp reads</li>
-<li><a href="http://genome.ucla.edu/bfast/">BFAST</a></li>
-<li><a href="http://bioinformatics.bc.edu/marthlab/Mosaik/">MOSAIK</a>:
-  hashes all positions in the reference genome and uses a 'jump database' to
-  efficiently locate information in the hash table and thus reduces memory
+  <li><a href="http://genome.ucla.edu/bfast/">BFAST</a></li>
+  <li><a href="http://bioinformatics.bc.edu/marthlab/Mosaik/">MOSAIK</a>:
+  hashes all positions in the reference genome and uses a ‘jump database’ to 
+  efficiently locate information in the hash table and thus reduces memory 
   requirements by approximately two-thirds over a naive implementation.</li>
 </ul>
 
+<h5 id="burrows-wheeler-transform-methods">Burrows-Wheeler Transform methods</h5>
 
-<h5>Burrows-Wheeler Transform methods</h5>
-
-<p>use the FM index data structure, retains the suffix array's ability for rapid subsequence
+<p>use the FM index data structure, retains the suffix array’s ability for rapid subsequence
 search. Much faster than their hash-based counterparts at the same sensitivity level.</p>
 
 <ol>
-<li>the sequence order of the reference genome is modified using the BWT(reversible)</li>
-<li>the final index is created; it is then used for rapid read placement on the
+  <li>the sequence order of the reference genome is modified using the BWT(reversible)</li>
+  <li>the final index is created; it is then used for rapid read placement on the
 genome(memory-intensive)</li>
 </ol>
-
 
 <p>softwares:</p>
 
 <ul>
-<li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=19261174&amp;amp;dopt=Abstract">BOWTIE</a>:
+  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=19261174&amp;dopt=Abstract">BOWTIE</a>:
   Reported 30-fold speed increase over hash-based MAQ</li>
-<li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=19451168&amp;amp;dopt=Abstract">BWA</a></li>
-<li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=19497933&amp;amp;dopt=Abstract">SOAP2</a></li>
+  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=19451168&amp;dopt=Abstract">BWA</a></li>
+  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=19497933&amp;dopt=Abstract">SOAP2</a></li>
 </ul>
 
-
-<h4>Assembly</h4>
+<h4 id="assembly">Assembly</h4>
 
 <p><img src="http://bingw.github.com/images/paul_alignment.png" alt="de Bruijn graph" /></p>
 
 <ol>
-<li>Sequence at top represents the genome, which is then sampled using shotgun sequencing in base space with 7-bp reads.</li>
-<li>the k-mers in the reads (4-mers in this example) are collected into nodes and the coverage at each node is recorded.</li>
-<li>he graph is simplified to combine nodes that are associated with the continuous linear stretches into single, larger nodes of various k-mer sizes.</li>
-<li>error correction removes the tips and bubbles that result from sequencing errors and creates a final graph structure that accurately and completely describes in the original genome sequence.</li>
+  <li>Sequence at top represents the genome, which is then sampled using shotgun sequencing in base space with 7-bp reads.</li>
+  <li>the k-mers in the reads (4-mers in this example) are collected into nodes and the coverage at each node is recorded.</li>
+  <li>he graph is simplified to combine nodes that are associated with the continuous linear stretches into single, larger nodes of various k-mer sizes.</li>
+  <li>error correction removes the tips and bubbles that result from sequencing errors and creates a final graph structure that accurately and completely describes in the original genome sequence.</li>
 </ol>
-
 
 <p>softwares:</p>
 
 <ul>
-<li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=17908823&amp;amp;dopt=Abstract">SHARCGS</a></li>
-<li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=17893086&amp;amp;dopt=Abstract">VCAKE</a></li>
-<li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=18349386&amp;amp;dopt=Abstract">VELVET</a></li>
-<li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=18083777&amp;amp;dopt=Abstract">EULER-SR</a></li>
-<li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=18332092&amp;amp;dopt=Abstract">EDENA</a></li>
-<li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=19251739&amp;amp;dopt=Abstract">ABySS</a></li>
-<li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;amp;cmd=Retrieve&amp;amp;db=PubMed&amp;amp;list_uids=18340039&amp;amp;dopt=Abstract">ALLPATHS</a></li>
+  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=17908823&amp;dopt=Abstract">SHARCGS</a></li>
+  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=17893086&amp;dopt=Abstract">VCAKE</a></li>
+  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=18349386&amp;dopt=Abstract">VELVET</a></li>
+  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=18083777&amp;dopt=Abstract">EULER-SR</a></li>
+  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=18332092&amp;dopt=Abstract">EDENA</a></li>
+  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=19251739&amp;dopt=Abstract">ABySS</a></li>
+  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=18340039&amp;dopt=Abstract">ALLPATHS</a></li>
 </ul>
 
-
-<h4>Disscusion</h4>
+<h4 id="disscusion">Disscusion</h4>
 
 <p>List of sequence alignment software: <a href="http://en.wikipedia.org/wiki/List_of_sequence_alignment_software">wiki</a>, <a href="http://seqanswers.com/forums/showthread.php?t=43">SEQanswers</a></p>
+
 ]]></content>
   </entry>
   
