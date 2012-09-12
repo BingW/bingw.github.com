@@ -4,7 +4,7 @@
   <title><![CDATA[Bing & KK]]></title>
   <link href="http://BingW.github.com/atom.xml" rel="self"/>
   <link href="http://BingW.github.com/"/>
-  <updated>2012-09-12T16:58:20-05:00</updated>
+  <updated>2012-09-12T16:59:57-05:00</updated>
   <id>http://BingW.github.com/</id>
   <author>
     <name><![CDATA[BingW]]></name>
@@ -18,9 +18,9 @@
     <link href="http://BingW.github.com/blog/2012/09/12/genetic-colloquium-jimingjiang/"/>
     <updated>2012-09-12T15:32:00-05:00</updated>
     <id>http://BingW.github.com/blog/2012/09/12/genetic-colloquium-jimingjiang</id>
-    <content type="html"><![CDATA[<p>[centromeres][http://en.wikipedia.org/wiki/Centromere]
-[Kinetochore][http://en.wikipedia.org/wiki/Kinetochore]
-[Microtubule][http://en.wikipedia.org/wiki/Microtubule]</p>
+    <content type="html"><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Centromere">centromeres</a>
+<a href="http://en.wikipedia.org/wiki/Kinetochore">Kinetochore</a>
+<a href="http://en.wikipedia.org/wiki/Microtubule">Microtubule</a></p>
 
 <p>centromere: histone CENH3 -&gt; H3</p>
 
