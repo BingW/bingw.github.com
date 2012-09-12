@@ -4,7 +4,7 @@
   <title><![CDATA[Bing & KK]]></title>
   <link href="http://BingW.github.com/atom.xml" rel="self"/>
   <link href="http://BingW.github.com/"/>
-  <updated>2012-09-10T21:59:59-05:00</updated>
+  <updated>2012-09-12T16:58:20-05:00</updated>
   <id>http://BingW.github.com/</id>
   <author>
     <name><![CDATA[BingW]]></name>
@@ -12,6 +12,126 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Genetic_Colloquium_JimingJiang]]></title>
+    <link href="http://BingW.github.com/blog/2012/09/12/genetic-colloquium-jimingjiang/"/>
+    <updated>2012-09-12T15:32:00-05:00</updated>
+    <id>http://BingW.github.com/blog/2012/09/12/genetic-colloquium-jimingjiang</id>
+    <content type="html"><![CDATA[<p>[centromeres][http://en.wikipedia.org/wiki/Centromere]
+[Kinetochore][http://en.wikipedia.org/wiki/Kinetochore]
+[Microtubule][http://en.wikipedia.org/wiki/Microtubule]</p>
+
+<p>centromere: histone CENH3 -&gt; H3</p>
+
+<ul>
+  <li>Heterochromatin in Srosophlia melanogaster: 420kb</li>
+  <li>The C-banding patterns of human chromosome: 0.25~5Mb a satellite</li>
+</ul>
+
+<p>Centromeres are evolutionary junkyards of eukaryotic genomes:</p>
+
+<ol>
+  <li>Centomeres in most higher eukaryotic … </li>
+  <li>do not contain genes </li>
+  <li>cross over is completely suppressed </li>
+</ol>
+
+<p>The brith and death of centromeres:</p>
+
+<ul>
+  <li>joint</li>
+  <li>moved from satellite, old still there</li>
+</ul>
+
+<p>sentromere repositioning during evolution:</p>
+
+<ul>
+  <li>no rearranging. </li>
+</ul>
+
+<p>Neocentromere-mediateed centromere evolution:</p>
+
+<ul>
+  <li>somthing in between?</li>
+</ul>
+
+<p>~~~~~~~~~~~~~~~~Work~~~~~~~~~~~~~~~~~</p>
+
+<p>CentO satellite repeat in rice replace:</p>
+
+<ul>
+  <li>range from 60kb - 4Mb</li>
+</ul>
+
+<p>potato centromeres:</p>
+
+<ul>
+  <li>sequencing reads mapping peak</li>
+  <li>those with no peak: satellate repeat 1.5Mb</li>
+</ul>
+
+<p>The starnge patato centormeres:
+1. 6 satellites rep unique
+2. 5 centormeres dose not contain satellites repeat
+3. one centormere contain both …</p>
+
+<p>An evolutionary new centromere will have battle with the original centeomere in
+the populations</p>
+
+<p>Different haplotypes of Potato centromere 2:</p>
+
+<ul>
+  <li>Atzimba VS Kennebec VS Kerr’s Pink</li>
+</ul>
+
+<p>How an evolutionary new centromere eventually prevails?</p>
+
+<ul>
+  <li>Human neroecntromeres are small(90-469kb) VS normal centromers(540-1700kb)</li>
+  <li>Cen2 in Oats(4Mb) &gt; Cen2 in Maize(B73)(2Mb): expanded in one direction @ same
+place</li>
+  <li>CENH3 nucleosomes appear to be incompatible to transcription -&gt; No genes.</li>
+  <li>alter the transcription</li>
+  <li>may impact the recombination of many genes in the centromeric regions</li>
+  <li>may impact the epigenetic modification</li>
+</ul>
+
+<p>take home
+1. centromeres evolved from neocentromeres
+2. evolve slowly or change from “repeatless” pattern to “repeat-based” pattern
+   in a sudden fasion
+3. Neocentromere activation will affect transcription and recombintation of
+   gene located in teh centromeric and pericentromeric regions.</p>
+
+<p>if a centromeres longer than 10Mb it’s not stable.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Short-read mapping]]></title>
+    <link href="http://BingW.github.com/blog/2012/09/12/short-read-mapping/"/>
+    <updated>2012-09-12T14:27:00-05:00</updated>
+    <id>http://BingW.github.com/blog/2012/09/12/short-read-mapping</id>
+    <content type="html"><![CDATA[<p>concept: TP FP FN TN</p>
+
+<p>When does alignment accuracy matter? tradeoff bettwen speed and accuracy.</p>
+
+<h4 id="bw-algorithms">BW-algorithms</h4>
+<p><a href="XXX.png">figure1</a></p>
+
+<h4 id="algorithms-and-speed-up">Algorithms and speed up</h4>
+
+<ul>
+  <li>use alignment refinement</li>
+</ul>
+
+<p>Bowtie 2</p>
+
+<h4 id="dynamic-programming">Dynamic Programming</h4>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Short-read sequencing]]></title>
@@ -89,7 +209,7 @@
 </ul>
 
 <p>Number of Contigs = $N \cdot e^{-\frac{LN}{G} \cdot (1-\frac{T}{L})}$
-<a href="http://www.ncbi.nlm.nih.gov/pubmed/3294162">LW prediction</a></p>
+(<a href="http://www.ncbi.nlm.nih.gov/pubmed/3294162">LW prediction</a>)</p>
 
 <h4 id="gap-closure-strategies">Gap Closure Strategies</h4>
 

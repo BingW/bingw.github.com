@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Bioinfo | Bing & KK]]></title>
   <link href="http://BingW.github.com/blog/categories/bioinfo/atom.xml" rel="self"/>
   <link href="http://BingW.github.com/"/>
-  <updated>2012-09-10T21:59:59-05:00</updated>
+  <updated>2012-09-12T16:58:20-05:00</updated>
   <id>http://BingW.github.com/</id>
   <author>
     <name><![CDATA[BingW]]></name>
@@ -89,7 +89,7 @@
 </ul>
 
 <p>Number of Contigs = $N \cdot e^{-\frac{LN}{G} \cdot (1-\frac{T}{L})}$
-<a href="http://www.ncbi.nlm.nih.gov/pubmed/3294162">LW prediction</a></p>
+(<a href="http://www.ncbi.nlm.nih.gov/pubmed/3294162">LW prediction</a>)</p>
 
 <h4 id="gap-closure-strategies">Gap Closure Strategies</h4>
 

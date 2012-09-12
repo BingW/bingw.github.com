@@ -5,11 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Short-read sequencing - Bing & KK</title>
+  <title>Genetic_Colloquium_JimingJiang - Bing & KK</title>
   <meta name="author" content="BingW">
 
   
-  <meta name="description" content="Sequencing and de novo assembly Sequencing technology concept: mate pair VS paired end The Process: Choose sequencing platform Make DNA Prepare &hellip;">
+  <meta name="description" content="[centromeres][http://en.wikipedia.org/wiki/Centromere]
+[Kinetochore][http://en.wikipedia.org/wiki/Kinetochore]
+[Microtubule][http://en.wikipedia.org/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://BingW.github.com/blog/2012/09/10/short-read-sequencing/">
+  <link rel="canonical" href="http://BingW.github.com/blog/2012/09/12/genetic-colloquium-jimingjiang/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -98,7 +100,7 @@
   
   <header>
     
-      <h1 class="entry-title">Short-read Sequencing</h1>
+      <h1 class="entry-title">Genetic_Colloquium_JimingJiang</h1>
     
     
       <p class="meta">
@@ -114,95 +116,100 @@
   
 
 
-<time datetime="2012-09-10T14:23:00-05:00" pubdate data-updated="true">Sep 10<span>th</span>, 2012</time>
+<time datetime="2012-09-12T15:32:00-05:00" pubdate data-updated="true">Sep 12<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><h3 id="sequencing-and-de-novo-assembly">Sequencing and de novo assembly</h3>
+<div class="entry-content"><p>[centromeres][http://en.wikipedia.org/wiki/Centromere]
+[Kinetochore][http://en.wikipedia.org/wiki/Kinetochore]
+[Microtubule][http://en.wikipedia.org/wiki/Microtubule]</p>
 
-<p><a href="http://www.ncbi.nlm.nih.gov/pubmed/21307932">Sequencing technology</a>
-<img src="http://bingw.github.com/images/short_read_sequencing_t1.png" alt="Sequencing technology" /></p>
+<p>centromere: histone CENH3 -&gt; H3</p>
 
-<p>concept: mate pair VS paired end</p>
+<ul>
+  <li>Heterochromatin in Srosophlia melanogaster: 420kb</li>
+  <li>The C-banding patterns of human chromosome: 0.25~5Mb a satellite</li>
+</ul>
 
-<h4 id="the-process">The Process:</h4>
+<p>Centromeres are evolutionary junkyards of eukaryotic genomes:</p>
+
 <ol>
-  <li>Choose sequencing platform</li>
-  <li>Make DNA</li>
-  <li>Prepare Library</li>
-  <li>sequence Run</li>
-  <li>primary Analysis Pipeline
- Converts image files (Tb) to sequences (100’s Gb).(inreversbale)</li>
-  <li>Obtain Sequence Reads</li>
+  <li>Centomeres in most higher eukaryotic … </li>
+  <li>do not contain genes </li>
+  <li>cross over is completely suppressed </li>
 </ol>
 
-<h4 id="sequence-quality">Sequence quality:</h4>
-
-<p>Phred Score VS accuracy:</p>
+<p>The brith and death of centromeres:</p>
 
 <ul>
-  <li>10 ==&gt; 90%</li>
-  <li>20 ==&gt; 99%</li>
-  <li>30 ==&gt; 99.9%</li>
-  <li>40 ==&gt; 99.99%</li>
-  <li>50 ==&gt; 99.999%</li>
+  <li>joint</li>
+  <li>moved from satellite, old still there</li>
 </ul>
 
-<h4 id="format">Format:</h4>
-
-<p>different identifier for phred<a href="http://en.wikipedia.org/wiki/FASTQ_format">wiki</a></p>
-
-<p>A software for this<a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a></p>
-
-<h4 id="genome-scale-sequence-analysis">Genome-scale Sequence Analysis</h4>
+<p>sentromere repositioning during evolution:</p>
 
 <ul>
-  <li><strong>De nove assembly</strong></li>
-  <li>Templated assembly</li>
-  <li>Read mapping or alignment to a reference genome</li>
+  <li>no rearranging. </li>
 </ul>
 
-<h4 id="assemblers">Assemblers</h4>
-
-<p>overlap graph assemblers:</p>
+<p>Neocentromere-mediateed centromere evolution:</p>
 
 <ul>
-  <li>Screen out known repeats and set them aside for later</li>
-  <li>Infer repetitiveness based on coverage</li>
-  <li>First assemble unambiguous overlaps, then resolve repeats using mate pairs</li>
+  <li>somthing in between?</li>
 </ul>
 
-<p>De Bruijn K-mers assemblers problems:</p>
+<p>~~~~~~~~~~~~~~~~Work~~~~~~~~~~~~~~~~~</p>
+
+<p>CentO satellite repeat in rice replace:</p>
 
 <ul>
-  <li>Require large amount of memory to store graph</li>
-  <li>Not as easy to parallelize as overlap assemblers</li>
+  <li>range from 60kb - 4Mb</li>
 </ul>
 
-<h4 id="how-many-clonesreads-do-we-need">How many clones/reads do we need?</h4>
+<p>potato centromeres:</p>
 
 <ul>
-  <li>G = Genome Length</li>
-  <li>L = Sequence Read Length</li>
-  <li>N = Number of Sequences Collected</li>
-  <li>T = Number of Basepairs of Overlap Needed</li>
+  <li>sequencing reads mapping peak</li>
+  <li>those with no peak: satellate repeat 1.5Mb</li>
 </ul>
 
-<p>Number of Contigs = $N \cdot e^{-\frac{LN}{G} \cdot (1-\frac{T}{L})}$
-(<a href="http://www.ncbi.nlm.nih.gov/pubmed/3294162">LW prediction</a>)</p>
+<p>The starnge patato centormeres:
+1. 6 satellites rep unique
+2. 5 centormeres dose not contain satellites repeat
+3. one centormere contain both …</p>
 
-<h4 id="gap-closure-strategies">Gap Closure Strategies</h4>
+<p>An evolutionary new centromere will have battle with the original centeomere in
+the populations</p>
+
+<p>Different haplotypes of Potato centromere 2:</p>
 
 <ul>
-  <li>Primer walk to sequence the rest of linking clones that span a scaffold gap</li>
-  <li>Primer walk off clones at the ends of contigs for which there is no linking information</li>
-  <li>PCR based on your best guess at contig order (comparison to other closely related genomes, predicted genes at the end of genomes, anything else you can come up with)</li>
-  <li>Combinatorial PCR with primers designed at the end of each contig</li>
+  <li>Atzimba VS Kennebec VS Kerr’s Pink</li>
 </ul>
 
+<p>How an evolutionary new centromere eventually prevails?</p>
+
+<ul>
+  <li>Human neroecntromeres are small(90-469kb) VS normal centromers(540-1700kb)</li>
+  <li>Cen2 in Oats(4Mb) &gt; Cen2 in Maize(B73)(2Mb): expanded in one direction @ same
+place</li>
+  <li>CENH3 nucleosomes appear to be incompatible to transcription -&gt; No genes.</li>
+  <li>alter the transcription</li>
+  <li>may impact the recombination of many genes in the centromeric regions</li>
+  <li>may impact the epigenetic modification</li>
+</ul>
+
+<p>take home
+1. centromeres evolved from neocentromeres
+2. evolve slowly or change from “repeatless” pattern to “repeat-based” pattern
+   in a sudden fasion
+3. Neocentromere activation will affect transcription and recombintation of
+   gene located in teh centromeric and pericentromeric regions.</p>
+
+<p>if a centromeres longer than 10Mb it’s not stable.</p>
 </div>
 
 
@@ -225,14 +232,8 @@
   
 
 
-<time datetime="2012-09-10T14:23:00-05:00" pubdate data-updated="true">Sep 10<span>th</span>, 2012</time>
+<time datetime="2012-09-12T15:32:00-05:00" pubdate data-updated="true">Sep 12<span>th</span>, 2012</time>
       
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/bioinfo/'>Bioinfo</a>, <a class='category' href='/blog/categories/gen875/'>Gen875</a>
-  
-</span>
 
 
     </p>
@@ -246,10 +247,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/09/10/schatz2010-assemblyreview/" title="Previous Post: Schatz2010_AssemblyReview">&laquo; Schatz2010_AssemblyReview</a>
+        <a class="basic-alignment left" href="/blog/2012/09/12/short-read-mapping/" title="Previous Post: Short-read mapping">&laquo; Short-read mapping</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/09/12/short-read-mapping/" title="Next Post: Short-read mapping">Short-read mapping &raquo;</a>
       
     </p>
   </footer>
