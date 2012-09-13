@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: evolution | Bing & KK]]></title>
+  <link href="http://BingW.github.com/blog/categories/evolution/atom.xml" rel="self"/>
+  <link href="http://BingW.github.com/"/>
+  <updated>2012-09-13T16:46:29-05:00</updated>
+  <id>http://BingW.github.com/</id>
+  <author>
+    <name><![CDATA[BingW]]></name>
+    <email><![CDATA[toaya.kase@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[evolution seminar]]></title>
+    <link href="http://BingW.github.com/blog/2012/09/13/evolution-seminar/"/>
+    <updated>2012-09-13T12:04:00-05:00</updated>
+    <id>http://BingW.github.com/blog/2012/09/13/evolution-seminar</id>
+    <content type="html"><![CDATA[<p>by David</p>
+
+<p>Biodiversity genetics:</p>
+
+<ul>
+  <li>wingsize in nasonia</li>
+  <li>pheromones in Drosophlia</li>
+  <li>Repeated evolution of alcohol consuption</li>
+</ul>
+
+<h4 id="mainly-about-the-first-one">mainly about the first one:</h4>
+
+<p>Nasonia: parasitoid wasp, Haplo-diploid genetics</p>
+
+<p><strong>Wing size: rapid evolution of sex-special</strong></p>
+
+<p>What genes are invloved in growth?</p>
+
+<ul>
+  <li>down stream: founction genes</li>
+  <li>up stream: regulatory genes</li>
+</ul>
+
+<ol>
+  <li>hybrid backcross</li>
+  <li>wing QTL introgerssion lines </li>
+  <li>linked mutant markers</li>
+  <li>fine scale recombinants</li>
+</ol>
+
+<p>recombination mapping wdw to clone genes
+cis-regulation: could be adjacent genes.
+dsx^M expression is corrletated with wing size</p>
+
+<p>upd: Regulatory signaling in the JAK/STAT pathway
+wdw drive upd-like expression</p>
+
+]]></content>
+  </entry>
+  
+</feed>

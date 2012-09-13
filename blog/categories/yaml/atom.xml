@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: yaml | Bing & KK]]></title>
+  <link href="http://BingW.github.com/blog/categories/yaml/atom.xml" rel="self"/>
+  <link href="http://BingW.github.com/"/>
+  <updated>2012-09-13T16:46:29-05:00</updated>
+  <id>http://BingW.github.com/</id>
+  <author>
+    <name><![CDATA[BingW]]></name>
+    <email><![CDATA[toaya.kase@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[YAML Format]]></title>
+    <link href="http://BingW.github.com/blog/2012/09/13/yaml-format/"/>
+    <updated>2012-09-13T16:39:00-05:00</updated>
+    <id>http://BingW.github.com/blog/2012/09/13/yaml-format</id>
+    <content type="html"><![CDATA[<p>start with <code>---</code> end with <code>---</code> at the head of your document:</p>
+
+<ul>
+  <li>layout: post</li>
+  <li>title: “Hello World”</li>
+  <li>date: 2012-06-19 05:20 </li>
+  <li>comments: true </li>
+  <li>categories: test</li>
+  <li>author: Bing Wang</li>
+  <li>
+    <p>published: true</p>
+  </li>
+  <li>external_url: </li>
+  <li>sharing: true</li>
+  <li>footer: true</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: markdown | Bing & KK]]></title>
+  <link href="http://BingW.github.com/blog/categories/markdown/atom.xml" rel="self"/>
+  <link href="http://BingW.github.com/"/>
+  <updated>2012-09-13T16:46:29-05:00</updated>
+  <id>http://BingW.github.com/</id>
+  <author>
+    <name><![CDATA[BingW]]></name>
+    <email><![CDATA[toaya.kase@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Kramdown Syntax]]></title>
+    <link href="http://BingW.github.com/blog/2012/09/13/kramdown-syntax/"/>
+    <updated>2012-09-13T14:42:00-05:00</updated>
+    <id>http://BingW.github.com/blog/2012/09/13/kramdown-syntax</id>
+    <content type="html"><![CDATA[<p><a href="http://kramdown.rubyforge.org/quickref.html">Quick_Reference</a><br />
+<a href="http://kramdown.rubyforge.org/syntax.html">Syntax</a></p>
+
+<p>Features of origin <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a><a href="http://wowubuntu.com/markdown/basic.html">中文</a></p>
+
+<ul>
+  <li>Head. use<code>====</code>or<code>----</code>under head.or use<code>#</code>or<code>##</code> or <code>###</code> or <code>####</code> … before head</li>
+  <li>Quote. use <code>&gt;</code> infront of quote brock</li>
+  <li>Emphasize. use <code>*</code> or <code>**</code> or <code>_</code> or <code>__</code> wrap text</li>
+  <li>List. use <code>* item</code>,<code>+ item</code>,<code>- item</code> or <code>1. item</code>,<code>2. item</code>,<code>3. item</code>start the line</li>
+  <li>Link. use <code>[example](link)</code> or <code>[example][index]</code> and put <code>[index]:link</code>in the
+end</li>
+  <li>Image. same as link, but put <code>!</code> in the front</li>
+  <li>Code in line. use <code>`code`</code> </li>
+  <li>Code in block. use 4 space in front</li>
+</ul>
+
+<p>Attracting features:</p>
+
+<ul>
+  <li><a href="http://kramdown.rubyforge.org/quickref.html#footnotes">Footnote</a>. use <code>[^1]</code> in line and <code>[^1]</code> in the end.</li>
+  <li><a href="http://kramdown.rubyforge.org/quickref.html#abbreviations">Abbreviation</a>. use <code>*[term]: defination</code> in the end.</li>
+  <li><a href="http://kramdown.rubyforge.org/quickref.html#tables">Table</a>. same as <abbr title="reStructuredText">rst</abbr></li>
+  <li><a href="http://kramdown.rubyforge.org/quickref.html#inline-attributes">Span Style</a>. use <code>red{:style:"color:red"}</code> inline behind the term.</li>
+  <li><a href="http://kramdown.rubyforge.org/quickref.html#code-blocks">Code block</a>. use <code>~~~~</code> start, use longer <code>~~~~~~~</code> end.</li>
+  <li><a href="http://kramdown.rubyforge.org/quickref.html#horizontal-rules">Horizontal Rules</a>. use <code>* * * *</code> or <code>- - - -</code> or <code>--------</code></li>
+  <li><a href="http://kramdown.rubyforge.org/syntax.html#math-blocks">LaTeX</a>. use <code>$$</code> start, <code>$$</code> end</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
