@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Gen875, | Bing & KK]]></title>
+  <link href="http://BingW.github.com/blog/categories/gen875-/atom.xml" rel="self"/>
+  <link href="http://BingW.github.com/"/>
+  <updated>2012-09-17T14:31:43-05:00</updated>
+  <id>http://BingW.github.com/</id>
+  <author>
+    <name><![CDATA[BingW]]></name>
+    <email><![CDATA[toaya.kase@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[DePristo_VariationDiscovery]]></title>
+    <link href="http://BingW.github.com/blog/2012/09/17/depristo-variationdiscovery/"/>
+    <updated>2012-09-17T00:26:00-05:00</updated>
+    <id>http://BingW.github.com/blog/2012/09/17/depristo-variationdiscovery</id>
+    <content type="html"><![CDATA[<h3 id="a-frame-work-for-variation-discovery-and-genotyping-using-next-genetation-dna-sequencing-data">A frame work for variation discovery and genotyping using next-genetation DNA sequencing data</h3>
+<p><em>Mark A DePristo .etc</em></p>
+
+<h4 id="abstract">Abstract</h4>
+<p>A frame work to discovery and genotype variation among multiple samples <br />
+across five sequencing technologies and three canonical experimental design.</p>
+
+<p>process:</p>
+
+<ul>
+  <li>initial read mapping</li>
+  <li>local alignment around indels</li>
+  <li>base quality score recalibration</li>
+  <li>SNP discovery and genotyping to find all potential variants</li>
+  <li>machine learing to separate true segreating variation from machnie artifacts
+common to next-generation sequencing tech.</li>
+</ul>
+
+<h4 id="introduction">Introduction</h4>
+<p>three datasets:
+<img src="../images/DePristo_table1.png" alt="NGS datasets analyzed" /></p>
+
+<h4 id="results">Results</h4>
+<p><img src="../images/DePristo_fig1.png" alt="Three-part conceptual framework" /></p>
+
+<p>instantiated in Genome Analysis Toolkit <a href="http://genome.cshlp.org/content/20/9/1297"><abbr title="Genome Analysis Toolkit">GATK</abbr></a></p>
+
+<h4 id="applying-the-analysis-pipeline-to-hiseq28-mb-exome-capturelow-pass-4x-sequencing">Applying the analysis pipeline to Hiseq/28-Mb exome capture/low-pass (4x) sequencing</h4>
+<p><img src="../images/DePristo_table2.png" alt="Raw to racalibrated" /></p>
+
+<p><img src="../images/DePristo_fig4.png" alt="Results of variant quality recalibration" /></p>
+
+<p>Some concepts:<abbr title="transition(A<->G,T<->C) / transversion(others..)">Ti/Tv</abbr>,<abbr title="linkage disequilibrium">LD</abbr>,<abbr title="copy number variations">CNVs</abbr>,<abbr title="next-generation sequencing">NGS</abbr>,<abbr title="1000 Genomes Project">1KG</abbr>,<abbr title="Genome Analysis Toolkit">GATK</abbr>,<abbr title="false discovery rate">FDR</abbr>,<abbr title="Single Nucleotide Polymorphism Database">dbSNP</abbr>,<abbr title="whole genome shotgun">WGS</abbr>,<abbr title="non-reference discrepancy">NRD</abbr>,<abbr title="non-reference sensitivity">NR</abbr>,<abbr title="multiple sequence realignment">MSA</abbr>,<abbr title="Root-mean-square errors">RMSE</abbr>,<abbr title="HapMap3">HM3</abbr></p>
+
+]]></content>
+  </entry>
+  
+</feed>
