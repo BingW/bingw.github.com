@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>YAML Format - Bing & KK</title>
+  <title>Variant discovery using NGS - Bing & KK</title>
   <meta name="author" content="BingW">
 
   
-  <meta name="description" content="start with --- end with --- at the head of your document: layout: post title: “Hello World” date: 2012-06-19 05:20 comments: true categories: test &hellip;">
+  <meta name="description" content="Types of Variants Simple Single Nucleotide Polymorphisms (SNPs) Multiple adjacent or clustered polymorphisms Insertions and deletions (Indels) &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://BingW.github.com/blog/2012/09/13/yaml-format/">
+  <link rel="canonical" href="http://BingW.github.com/blog/2012/09/17/variant-discovery-using-ngs/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -98,7 +98,7 @@
   
   <header>
     
-      <h1 class="entry-title">YAML Format</h1>
+      <h1 class="entry-title">Variant Discovery Using NGS</h1>
     
     
       <p class="meta">
@@ -114,29 +114,67 @@
   
 
 
-<time datetime="2012-09-13T16:39:00-05:00" pubdate data-updated="true">Sep 13<span>th</span>, 2012</time>
+<time datetime="2012-09-17T14:33:00-05:00" pubdate data-updated="true">Sep 17<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>start with <code>---</code> end with <code>---</code> at the head of your document:</p>
+<div class="entry-content"><h4 id="types-of-variants">Types of Variants</h4>
 
 <ul>
-  <li>layout: post</li>
-  <li>title: “Hello World”</li>
-  <li>date: 2012-06-19 05:20 </li>
-  <li>comments: true </li>
-  <li>categories: test</li>
-  <li>author: Bing Wang</li>
-  <li>
-    <p>published: true</p>
-  </li>
-  <li>external_url: </li>
-  <li>sharing: true</li>
-  <li>footer: true</li>
+  <li>Simple Single Nucleotide Polymorphisms (SNPs)</li>
+  <li>Multiple adjacent or clustered polymorphisms</li>
+  <li>Insertions and deletions (Indels)</li>
+  <li>Inversions</li>
+  <li>Rearrangements</li>
+  <li>Copy number variation</li>
 </ul>
+
+<h4 id="separating-true-variants-from-artifacts">Separating true variants from artifacts</h4>
+
+<ul>
+  <li>Ignore suspicious regions – areas where too 
+many reads mapped given the expected 
+coverage</li>
+  <li>Require three reads on each strand</li>
+</ul>
+
+<h4 id="tradeoffs-of-sp-vs-sn">Tradeoffs of Sp VS Sn</h4>
+
+<ul>
+  <li>Sn = TP/(TP + FN)</li>
+  <li>Sn = Sensitivity: what portion of the total number 
+     of real variants did you detect?</li>
+  <li>Sp = TN/(TN + FP)</li>
+  <li>Sp = Specificity: what portion of the variants you 
+     discovered are really variants, not false 
+     positives?</li>
+</ul>
+
+<h4 id="framework-for-variation">Framework for variation</h4>
+
+<ol>
+  <li>NGS data processing </li>
+  <li>variant discovery and genotyping</li>
+  <li>integrative analysis
+see <a href="http://bingw.github.com/blog/2012/09/17/depristo-variationdiscovery/">here</a></li>
+</ol>
+
+<h4 id="sambam-and-samtools">SAM/BAM and SAMtools</h4>
+
+<ul>
+  <li>see <a href="http://en.wikipedia.org/wiki/SAMtools">SAMtools</a></li>
+  <li>see <a href="http://genome.sph.umich.edu/wiki/SAM">SAM</a></li>
+</ul>
+
+<h4 id="final-objective--vcf">Final objective = VCF</h4>
+
+<p><a href="http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41">format</a> </p>
+
+<p>Q1: How to determine a real SNP?<br />
+Q2: we canot assure the sencetivity and specfity are same in Novel and kwon data?</p>
 
 </div>
 
@@ -160,12 +198,12 @@
   
 
 
-<time datetime="2012-09-13T16:39:00-05:00" pubdate data-updated="true">Sep 13<span>th</span>, 2012</time>
+<time datetime="2012-09-17T14:33:00-05:00" pubdate data-updated="true">Sep 17<span>th</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/yaml/'>yaml</a>
+    <a class='category' href='/blog/categories/bioinfo/'>Bioinfo</a>, <a class='category' href='/blog/categories/gen875-/'>Gen875,</a>
   
 </span>
 
@@ -181,10 +219,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/09/13/kramdown-syntax/" title="Previous Post: Kramdown Syntax">&laquo; Kramdown Syntax</a>
+        <a class="basic-alignment left" href="/blog/2012/09/17/depristo-variationdiscovery/" title="Previous Post: DePristo_VariationDiscovery">&laquo; DePristo_VariationDiscovery</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/09/17/depristo-variationdiscovery/" title="Next Post: DePristo_VariationDiscovery">DePristo_VariationDiscovery &raquo;</a>
       
     </p>
   </footer>

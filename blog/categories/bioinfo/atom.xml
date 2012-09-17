@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Bioinfo | Bing & KK]]></title>
   <link href="http://BingW.github.com/blog/categories/bioinfo/atom.xml" rel="self"/>
   <link href="http://BingW.github.com/"/>
-  <updated>2012-09-17T14:31:43-05:00</updated>
+  <updated>2012-09-17T17:24:29-05:00</updated>
   <id>http://BingW.github.com/</id>
   <author>
     <name><![CDATA[BingW]]></name>
@@ -12,6 +12,69 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Variant discovery using NGS]]></title>
+    <link href="http://BingW.github.com/blog/2012/09/17/variant-discovery-using-ngs/"/>
+    <updated>2012-09-17T14:33:00-05:00</updated>
+    <id>http://BingW.github.com/blog/2012/09/17/variant-discovery-using-ngs</id>
+    <content type="html"><![CDATA[<h4 id="types-of-variants">Types of Variants</h4>
+
+<ul>
+  <li>Simple Single Nucleotide Polymorphisms (SNPs)</li>
+  <li>Multiple adjacent or clustered polymorphisms</li>
+  <li>Insertions and deletions (Indels)</li>
+  <li>Inversions</li>
+  <li>Rearrangements</li>
+  <li>Copy number variation</li>
+</ul>
+
+<h4 id="separating-true-variants-from-artifacts">Separating true variants from artifacts</h4>
+
+<ul>
+  <li>Ignore suspicious regions – areas where too 
+many reads mapped given the expected 
+coverage</li>
+  <li>Require three reads on each strand</li>
+</ul>
+
+<h4 id="tradeoffs-of-sp-vs-sn">Tradeoffs of Sp VS Sn</h4>
+
+<ul>
+  <li>Sn = TP/(TP + FN)</li>
+  <li>Sn = Sensitivity: what portion of the total number 
+     of real variants did you detect?</li>
+  <li>Sp = TN/(TN + FP)</li>
+  <li>Sp = Specificity: what portion of the variants you 
+     discovered are really variants, not false 
+     positives?</li>
+</ul>
+
+<h4 id="framework-for-variation">Framework for variation</h4>
+
+<ol>
+  <li>NGS data processing </li>
+  <li>variant discovery and genotyping</li>
+  <li>integrative analysis
+see <a href="http://bingw.github.com/blog/2012/09/17/depristo-variationdiscovery/">here</a></li>
+</ol>
+
+<h4 id="sambam-and-samtools">SAM/BAM and SAMtools</h4>
+
+<ul>
+  <li>see <a href="http://en.wikipedia.org/wiki/SAMtools">SAMtools</a></li>
+  <li>see <a href="http://genome.sph.umich.edu/wiki/SAM">SAM</a></li>
+</ul>
+
+<h4 id="final-objective--vcf">Final objective = VCF</h4>
+
+<p><a href="http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41">format</a> </p>
+
+<p>Q1: How to determine a real SNP?<br />
+Q2: we canot assure the sencetivity and specfity are same in Novel and kwon data?</p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[DePristo_VariationDiscovery]]></title>
@@ -38,17 +101,18 @@ common to next-generation sequencing tech.</li>
 
 <h4 id="introduction">Introduction</h4>
 <p>three datasets:
-<img src="../images/DePristo_table1.png" alt="NGS datasets analyzed" /></p>
+<img src="http://bingw.github.com/images/DePristo_table1.png" alt="NGS datasets analyzed" /></p>
 
 <h4 id="results">Results</h4>
-<p><img src="../images/DePristo_fig1.png" alt="Three-part conceptual framework" /></p>
+<p><img src="http://bingw.github.com/images/DePristo_fig1.png" alt="Three-part conceptual framework" /></p>
 
-<p>instantiated in Genome Analysis Toolkit <a href="http://genome.cshlp.org/content/20/9/1297"><abbr title="Genome Analysis Toolkit">GATK</abbr></a></p>
+<p>instantiated in Genome Analysis Toolkit <a href="http://genome.cshlp.org/content/20/9/1297"><abbr title="Genome Analysis Toolkit">GATK</abbr> ref</a>
+<a href="http://www.broadinstitute.org/gatk/">Toolkit</a></p>
 
 <h4 id="applying-the-analysis-pipeline-to-hiseq28-mb-exome-capturelow-pass-4x-sequencing">Applying the analysis pipeline to Hiseq/28-Mb exome capture/low-pass (4x) sequencing</h4>
-<p><img src="../images/DePristo_table2.png" alt="Raw to racalibrated" /></p>
+<p><img src="http://bingw.github.com/images/DePristo_table2.png" alt="Raw to racalibrated" /></p>
 
-<p><img src="../images/DePristo_fig4.png" alt="Results of variant quality recalibration" /></p>
+<p><img src="http://bingw.github.com/images/DePristo_fig4.png" alt="Results of variant quality recalibration" /></p>
 
 <p>Some concepts:<abbr title="transition(A<->G,T<->C) / transversion(others..)">Ti/Tv</abbr>,<abbr title="linkage disequilibrium">LD</abbr>,<abbr title="copy number variations">CNVs</abbr>,<abbr title="next-generation sequencing">NGS</abbr>,<abbr title="1000 Genomes Project">1KG</abbr>,<abbr title="Genome Analysis Toolkit">GATK</abbr>,<abbr title="false discovery rate">FDR</abbr>,<abbr title="Single Nucleotide Polymorphism Database">dbSNP</abbr>,<abbr title="whole genome shotgun">WGS</abbr>,<abbr title="non-reference discrepancy">NRD</abbr>,<abbr title="non-reference sensitivity">NR</abbr>,<abbr title="multiple sequence realignment">MSA</abbr>,<abbr title="Root-mean-square errors">RMSE</abbr>,<abbr title="HapMap3">HM3</abbr></p>
 
@@ -179,131 +243,6 @@ common to next-generation sequencing tech.</li>
     <content type="html"><![CDATA[<h3 id="assembly-of-large-genomes-using-second-generation-sequencing">Assembly of large genomes using second-generation sequencing</h3>
 
 <p><em>Michael C. Schatz, Arthur L. Delcher and Steven L. Salzberg</em></p>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[FlicekBirney2009-NGSReview]]></title>
-    <link href="http://BingW.github.com/blog/2012/09/09/FlicekBirney2009-NGSReview/"/>
-    <updated>2012-09-09T14:02:00-05:00</updated>
-    <id>http://BingW.github.com/blog/2012/09/09/FlicekBirney2009-NGSReview</id>
-    <content type="html"><![CDATA[<h3 id="sense-from-sequence-reads-methods-for-alignment-and-assembly">Sense From Sequence Reads: Methods for Alignment and Assembly</h3>
-
-<p><em>Paul Flicek &amp; Ewan Birney</em></p>
-
-<h4 id="abstruct">Abstruct</h4>
-
-<p>review of alignment and assembly algorithms</p>
-
-<h4 id="background">Background</h4>
-
-<p>quality versus cost tradeoff:</p>
-
-<ul>
-  <li>de novo sequencing: longer reads</li>
-  <li>resequencing: high coverage, paired-end reads</li>
-  <li>mapping TF binding site/location of modified histones: <a href="http://en.wikipedia.org/wiki/Chromatin_immunoprecipitation">ChIP</a>, short reads</li>
-  <li>DNase-seq: limited to only 20bp of informative sequence</li>
-</ul>
-
-<p>Different error characteristics: </p>
-
-<ul>
-  <li>Roche 454:insertion or deletion errors during homopolymer runs</li>
-  <li>ABI SOLiD &amp; Illumina/Solexa: errors toward the end of the read</li>
-</ul>
-
-<h4 id="alignment">Alignment</h4>
-
-<p>Alignment methods(tradeoff between speed and sensitivity):</p>
-
-<ul>
-  <li>hash table-based implementations</li>
-  <li>Burrows Wheeler transform(BWT)-based methods</li>
-</ul>
-
-<p>Alignment procedure:</p>
-
-<ol>
-  <li>heuristic techniques</li>
-  <li>accurate alignment alogrithms(Smith-Waterman)</li>
-</ol>
-
-<h5 id="hash-based-alignment-methods">Hash-based alignment methods</h5>
-
-<p>Sepecially for short reads. methods include:</p>
-
-<ul>
-  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=18714091&amp;dopt=Abstract">MAQ</a>:
-  From the first 28 bp of the read, MAQ program builds 6 hash tables corresponding 
-  to seeds of (length = 8, weight = 4). scans the reference genome against these 
-  hash tables. This ensures that all hits with 2 mismatches can be found. 20 hash 
-  tables required if get all 3 mismatches.</li>
-  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=18227114&amp;dopt=Abstract">SOPA</a></li>
-  <li>Illumina’s unpublished ELAND algorithm</li>
-</ul>
-
-<p>These have recently been joined by:</p>
-
-<ul>
-  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=19461883&amp;dopt=Abstract">SHRiMP</a>:
-  use a <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=16597241&amp;dopt=Abstract">q-gram</a> approach, (require mutiple sapced seeds per read</li>
-  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=18684737&amp;dopt=Abstract">ZOOM</a>:
-  manually constructed spaced seeds of weight 14 to enable the detection of up to 4    mismatches in 50-bp reads</li>
-  <li><a href="http://genome.ucla.edu/bfast/">BFAST</a></li>
-  <li><a href="http://bioinformatics.bc.edu/marthlab/Mosaik/">MOSAIK</a>:
-  hashes all positions in the reference genome and uses a ‘jump database’ to 
-  efficiently locate information in the hash table and thus reduces memory 
-  requirements by approximately two-thirds over a naive implementation.</li>
-</ul>
-
-<h5 id="burrows-wheeler-transform-methods">Burrows-Wheeler Transform methods</h5>
-
-<p>use the FM index data structure, retains the suffix array’s ability for rapid subsequence
-search. Much faster than their hash-based counterparts at the same sensitivity level.</p>
-
-<ol>
-  <li>the sequence order of the reference genome is modified using the BWT(reversible)</li>
-  <li>the final index is created; it is then used for rapid read placement on the
-genome(memory-intensive)</li>
-</ol>
-
-<p>softwares:</p>
-
-<ul>
-  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=19261174&amp;dopt=Abstract">BOWTIE</a>:
-  Reported 30-fold speed increase over hash-based MAQ</li>
-  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=19451168&amp;dopt=Abstract">BWA</a></li>
-  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=19497933&amp;dopt=Abstract">SOAP2</a></li>
-</ul>
-
-<h4 id="assembly">Assembly</h4>
-
-<p><img src="http://bingw.github.com/images/paul_alignment.png" alt="de Bruijn graph" /></p>
-
-<ol>
-  <li>Sequence at top represents the genome, which is then sampled using shotgun sequencing in base space with 7-bp reads.</li>
-  <li>the k-mers in the reads (4-mers in this example) are collected into nodes and the coverage at each node is recorded.</li>
-  <li>he graph is simplified to combine nodes that are associated with the continuous linear stretches into single, larger nodes of various k-mer sizes.</li>
-  <li>error correction removes the tips and bubbles that result from sequencing errors and creates a final graph structure that accurately and completely describes in the original genome sequence.</li>
-</ol>
-
-<p>softwares:</p>
-
-<ul>
-  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=17908823&amp;dopt=Abstract">SHARCGS</a></li>
-  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=17893086&amp;dopt=Abstract">VCAKE</a></li>
-  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=18349386&amp;dopt=Abstract">VELVET</a></li>
-  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=18083777&amp;dopt=Abstract">EULER-SR</a></li>
-  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=18332092&amp;dopt=Abstract">EDENA</a></li>
-  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=19251739&amp;dopt=Abstract">ABySS</a></li>
-  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=18340039&amp;dopt=Abstract">ALLPATHS</a></li>
-</ul>
-
-<h4 id="disscusion">Disscusion</h4>
-
-<p>List of sequence alignment software: <a href="http://en.wikipedia.org/wiki/List_of_sequence_alignment_software">wiki</a>, <a href="http://seqanswers.com/forums/showthread.php?t=43">SEQanswers</a></p>
 
 ]]></content>
   </entry>

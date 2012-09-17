@@ -9,9 +9,7 @@
   <meta name="author" content="BingW">
 
   
-  <meta name="description" content="A frame work for variation discovery and genotyping using next-genetation DNA sequencing data
-Mark A DePristo .etc Abstract
-A frame work to discovery &hellip;">
+  <meta name="description" content="Types of Variants Simple Single Nucleotide Polymorphisms (SNPs) Multiple adjacent or clustered polymorphisms Insertions and deletions (Indels) &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -103,6 +101,96 @@ A frame work to discovery &hellip;">
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2012/09/17/variant-discovery-using-ngs/">Variant Discovery Using NGS</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-17T14:33:00-05:00" pubdate data-updated="true">Sep 17<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h4 id="types-of-variants">Types of Variants</h4>
+
+<ul>
+  <li>Simple Single Nucleotide Polymorphisms (SNPs)</li>
+  <li>Multiple adjacent or clustered polymorphisms</li>
+  <li>Insertions and deletions (Indels)</li>
+  <li>Inversions</li>
+  <li>Rearrangements</li>
+  <li>Copy number variation</li>
+</ul>
+
+<h4 id="separating-true-variants-from-artifacts">Separating true variants from artifacts</h4>
+
+<ul>
+  <li>Ignore suspicious regions – areas where too 
+many reads mapped given the expected 
+coverage</li>
+  <li>Require three reads on each strand</li>
+</ul>
+
+<h4 id="tradeoffs-of-sp-vs-sn">Tradeoffs of Sp VS Sn</h4>
+
+<ul>
+  <li>Sn = TP/(TP + FN)</li>
+  <li>Sn = Sensitivity: what portion of the total number 
+     of real variants did you detect?</li>
+  <li>Sp = TN/(TN + FP)</li>
+  <li>Sp = Specificity: what portion of the variants you 
+     discovered are really variants, not false 
+     positives?</li>
+</ul>
+
+<h4 id="framework-for-variation">Framework for variation</h4>
+
+<ol>
+  <li>NGS data processing </li>
+  <li>variant discovery and genotyping</li>
+  <li>integrative analysis
+see <a href="http://bingw.github.com/blog/2012/09/17/depristo-variationdiscovery/">here</a></li>
+</ol>
+
+<h4 id="sambam-and-samtools">SAM/BAM and SAMtools</h4>
+
+<ul>
+  <li>see <a href="http://en.wikipedia.org/wiki/SAMtools">SAMtools</a></li>
+  <li>see <a href="http://genome.sph.umich.edu/wiki/SAM">SAM</a></li>
+</ul>
+
+<h4 id="final-objective--vcf">Final objective = VCF</h4>
+
+<p><a href="http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41">format</a> </p>
+
+<p>Q1: How to determine a real SNP?<br />
+Q2: we canot assure the sencetivity and specfity are same in Novel and kwon data?</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2012/09/17/depristo-variationdiscovery/">DePristo_VariationDiscovery</a></h1>
     
     
@@ -146,17 +234,18 @@ common to next-generation sequencing tech.</li>
 
 <h4 id="introduction">Introduction</h4>
 <p>three datasets:
-<img src="../images/DePristo_table1.png" alt="NGS datasets analyzed" /></p>
+<img src="http://bingw.github.com/images/DePristo_table1.png" alt="NGS datasets analyzed" /></p>
 
 <h4 id="results">Results</h4>
-<p><img src="../images/DePristo_fig1.png" alt="Three-part conceptual framework" /></p>
+<p><img src="http://bingw.github.com/images/DePristo_fig1.png" alt="Three-part conceptual framework" /></p>
 
-<p>instantiated in Genome Analysis Toolkit <a href="http://genome.cshlp.org/content/20/9/1297"><abbr title="Genome Analysis Toolkit">GATK</abbr></a></p>
+<p>instantiated in Genome Analysis Toolkit <a href="http://genome.cshlp.org/content/20/9/1297"><abbr title="Genome Analysis Toolkit">GATK</abbr> ref</a>
+<a href="http://www.broadinstitute.org/gatk/">Toolkit</a></p>
 
 <h4 id="applying-the-analysis-pipeline-to-hiseq28-mb-exome-capturelow-pass-4x-sequencing">Applying the analysis pipeline to Hiseq/28-Mb exome capture/low-pass (4x) sequencing</h4>
-<p><img src="../images/DePristo_table2.png" alt="Raw to racalibrated" /></p>
+<p><img src="http://bingw.github.com/images/DePristo_table2.png" alt="Raw to racalibrated" /></p>
 
-<p><img src="../images/DePristo_fig4.png" alt="Results of variant quality recalibration" /></p>
+<p><img src="http://bingw.github.com/images/DePristo_fig4.png" alt="Results of variant quality recalibration" /></p>
 
 <p>Some concepts:<abbr title="transition(A<->G,T<->C) / transversion(others..)&#8221;>Ti/Tv</abbr>,<abbr title="linkage disequilibrium">LD</abbr>,<abbr title="copy number variations">CNVs</abbr>,<abbr title="next-generation sequencing">NGS</abbr>,<abbr title="1000 Genomes Project">1KG</abbr>,<abbr title="Genome Analysis Toolkit">GATK</abbr>,<abbr title="false discovery rate">FDR</abbr>,<abbr title="Single Nucleotide Polymorphism Database">dbSNP</abbr>,<abbr title="whole genome shotgun">WGS</abbr>,<abbr title="non-reference discrepancy">NRD</abbr>,<abbr title="non-reference sensitivity">NR</abbr>,<abbr title="multiple sequence realignment">MSA</abbr>,<abbr title="Root-mean-square errors">RMSE</abbr>,<abbr title="HapMap3">HM3</abbr></p>
 
@@ -851,6 +940,10 @@ genome(memory-intensive)</li>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/09/17/variant-discovery-using-ngs/">Variant discovery using NGS</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/09/17/depristo-variationdiscovery/">DePristo_VariationDiscovery</a>
       </li>
     
@@ -864,10 +957,6 @@ genome(memory-intensive)</li>
     
       <li class="post">
         <a href="/blog/2012/09/13/evolution-seminar/">evolution seminar</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/09/12/genetic-colloquium-jimingjiang/">Genetic_Colloquium_JimingJiang</a>
       </li>
     
   </ul>
