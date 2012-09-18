@@ -9,7 +9,20 @@
   <meta name="author" content="BingW">
 
   
-  <meta name="description" content="Types of Variants Simple Single Nucleotide Polymorphisms (SNPs) Multiple adjacent or clustered polymorphisms Insertions and deletions (Indels) &hellip;">
+  <meta name="description" content="昨晚写了个程序给老婆看，老婆表示很好，就是在terminal里面只有白色单调了点，所以最好要有颜色。然后求助万能的google未果，只好求助更加万能的stakeoverflow，果然，顶得人不少，有157票赞同这个方案： 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14 class &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -95,6 +108,84 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/18/colorful-python/">让你的python亮起来</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-18T12:12:00-05:00" pubdate data-updated="true">Sep 18<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>昨晚写了个程序给老婆看，老婆表示很好，就是在terminal里面只有白色单调了点，所以最好要有颜色。然后求助万能的google未果，只好求助更加万能的<a href="http://stackoverflow.com/questions/287871/print-in-terminal-with-colors-using-python">stakeoverflow</a>，果然，顶得人不少，有157票赞同这个方案：</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+</pre></td><td class="code"><pre><code class="python"><span class="line">    <span class="k">class</span> <span class="nc">bcolors</span><span class="p">:</span>
+</span><span class="line">        <span class="n">HEADER</span> <span class="o">=</span> <span class="s">&#39;</span><span class="se">\033</span><span class="s">[95m&#39;</span> <span class="c">#pink</span>
+</span><span class="line">        <span class="n">OKBLUE</span> <span class="o">=</span> <span class="s">&#39;</span><span class="se">\033</span><span class="s">[94m&#39;</span> <span class="c">#blue</span>
+</span><span class="line">        <span class="n">OKGREEN</span> <span class="o">=</span> <span class="s">&#39;</span><span class="se">\033</span><span class="s">[92m&#39;</span> <span class="c">#green</span>
+</span><span class="line">        <span class="n">WARNING</span> <span class="o">=</span> <span class="s">&#39;</span><span class="se">\033</span><span class="s">[93m&#39;</span> <span class="c">#yellow</span>
+</span><span class="line">        <span class="n">FAIL</span> <span class="o">=</span> <span class="s">&#39;</span><span class="se">\033</span><span class="s">[91m&#39;</span> <span class="c">#red</span>
+</span><span class="line">        <span class="n">ENDC</span> <span class="o">=</span> <span class="s">&#39;</span><span class="se">\033</span><span class="s">[0m&#39;</span> <span class="c">#white</span>
+</span><span class="line">
+</span><span class="line">    <span class="k">print</span> <span class="n">bcolors</span><span class="o">.</span><span class="n">HEADER</span> <span class="o">+</span> <span class="s">&quot;Header&quot;</span> <span class="o">+</span> <span class="n">bcolors</span><span class="o">.</span><span class="n">ENDC</span>
+</span><span class="line">    <span class="k">print</span> <span class="n">bcolors</span><span class="o">.</span><span class="n">OKBLUE</span> <span class="o">+</span> <span class="s">&quot;OK&quot;</span> <span class="o">+</span> <span class="n">bcolors</span><span class="o">.</span><span class="n">ENDC</span>
+</span><span class="line">    <span class="k">print</span> <span class="n">bcolors</span><span class="o">.</span><span class="n">OKGREEN</span> <span class="o">+</span> <span class="s">&quot;another OK&quot;</span> <span class="o">+</span> <span class="n">bcolors</span><span class="o">.</span><span class="n">ENDC</span>
+</span><span class="line">    <span class="k">print</span> <span class="n">bcolors</span><span class="o">.</span><span class="n">WARNING</span> <span class="o">+</span> <span class="s">&quot;Warning&quot;</span> <span class="o">+</span> <span class="n">bcolors</span><span class="o">.</span><span class="n">ENDC</span>
+</span><span class="line">    <span class="k">print</span> <span class="n">bcolors</span><span class="o">.</span><span class="n">FAIL</span> <span class="o">+</span> <span class="s">&quot;Fail&quot;</span> <span class="o">+</span> <span class="n">bcolors</span><span class="o">.</span><span class="n">ENDC</span>
+</span><span class="line">    <span class="k">print</span> <span class="n">bcolors</span><span class="o">.</span><span class="n">ENDC</span> <span class="o">+</span> <span class="s">&quot;Endc&quot;</span> <span class="o">+</span> <span class="n">bcolors</span><span class="o">.</span><span class="n">ENDC</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>运行结果：</p>
+
+<p><img src="http://bingw.github.com/images/color_python.png" alt="colorfor_python" /></p>
+
+<p>注意事项：</p>
+
+<ul>
+  <li>后面的bcolors.ENDC最好加上，不然你的terminal就成那个颜色了，用ENDC是因为个人的terminal字体本来就是白色的……</li>
+  <li>貌似只在macOS，linux系统上可行，windows上需要开启<a href="http://support.microsoft.com/kb/101875">ansi.sys</a></li>
+  <li>如果需要更复杂的特性，可以阅读python document的<a href="http://docs.python.org/howto/curses.html">curses</a></li>
+</ul>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -624,6 +715,102 @@ place</li>
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2012/09/11/devin-pipeline/">Devin&#8217;s Pipeline</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-11T13:11:00-05:00" pubdate data-updated="true">Sep 11<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ol>
+  <li>
+    <p><strong>HMMER 1.8.4</strong> -&gt; detect high scoring matches to 
+(an HMM created from an alignment of S.cerevisiae introns and flanking sequences.)</p>
+  </li>
+  <li>
+    <p>Generated all ORFs above a context-dependent minimum size (60 bp at contigs ends and intron 
+splice-sites, 300 bp at other locations), combined these with the putative splice-sites and 
+selected the most upstream ATG as the putative start codon.</p>
+  </li>
+  <li>
+    <p>Retained only possible gene models longer than 300 bp.</p>
+  </li>
+  <li>
+    <p>Potential ORFs that spanned high-scoring matches to the splice site model were represented 
+by multiple alternative gene models.</p>
+  </li>
+  <li>
+    <p>At each locus, we aligned alternative models to the best available homolog (typically from 
+S. cerevisiae) using <strong>Exonerate</strong> (Slater and Birney 2005) (-model affine:global -exhaustive 1 -bestn 1)
+and selected the model with the highest score.</p>
+  </li>
+  <li>Sought positive evidence for all remaining gene models by <strong>BLAST</strong> (Altschul et al. 1997) against a 
+local database of:
+    <ul>
+      <li>yeast proteins assembled from completely sequenced yeast genomes (Wood et al. 2002; Cliften et al. 2003
+ ; Dujon et al. 2004; Kellis et al. 2004; Souciet et al. 2009), </li>
+      <li>the NCBI nr protein database</li>
+      <li>S. cerevisiae Ty and LTR sequences downloaded from Saccharomyces Genome Database (Engel et al. 2010) 
+ (SGD, http:// www.yeastgenome.org)</li>
+    </ul>
+  </li>
+  <li>
+    <p>Use HMMER3 (Eddy 2009) to search our gene models against a database of 4704 protein HMMs derived 
+from the Yeast Gene Order Browser (Byrne and Wolfe 2006) (YGOB, http://wolfe.gen.tcd.ie/ygob).</p>
+  </li>
+  <li>
+    <p>In order to recover small genes or rapidly evolving genes, we subjected all presumed intergenic 
+regions to low stringency BLAST searches against our local database of yeast proteins and searched
+genomic regions predicted by synteny to contain YGOB matches with our YGOB-HMM library.</p>
+  </li>
+  <li>
+    <p>To detect potential novel genes, we used linear discriminant analysis to assign ORFs lacking 
+homology to genes in the YGOB or yeast ortholog databases a “coding probability” based on whether 
+their codon usage frequencies more closely resembled confirmed protein-coding genes or confirmed 
+intergenic regions.</p>
+  </li>
+  <li>
+    <p>Eliminated poorly supported gene models that overlapped well-supported models and merged
+neighboring models that were likely to be fragments of the same gene.</p>
+  </li>
+  <li>
+    <p>The fragmented gene models were typically created by scaffold gaps or frameshifts
+(either real or due to sequencing errors).</p>
+  </li>
+  <li>
+    <p>The remaining models were stratified according to the quality of the supporting evidence and 
+comprised our initial protein-coding gene set.</p>
+  </li>
+  <li>We used <strong>tRNA-ScanSE</strong> to identify tRNA genes (Lowe and Eddy 1997).</li>
+</ol>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2012/09/10/short-read-sequencing/">Short-read Sequencing</a></h1>
     
     
@@ -736,198 +923,9 @@ place</li>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/10/schatz2010-assemblyreview/">Schatz2010_AssemblyReview</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-10T12:13:00-05:00" pubdate data-updated="true">Sep 10<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3 id="assembly-of-large-genomes-using-second-generation-sequencing">Assembly of large genomes using second-generation sequencing</h3>
-
-<p><em>Michael C. Schatz, Arthur L. Delcher and Steven L. Salzberg</em></p>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/09/FlicekBirney2009-NGSReview/">FlicekBirney2009-NGSReview</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-09T14:02:00-05:00" pubdate data-updated="true">Sep 9<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3 id="sense-from-sequence-reads-methods-for-alignment-and-assembly">Sense From Sequence Reads: Methods for Alignment and Assembly</h3>
-
-<p><em>Paul Flicek &amp; Ewan Birney</em></p>
-
-<h4 id="abstruct">Abstruct</h4>
-
-<p>review of alignment and assembly algorithms</p>
-
-<h4 id="background">Background</h4>
-
-<p>quality versus cost tradeoff:</p>
-
-<ul>
-  <li>de novo sequencing: longer reads</li>
-  <li>resequencing: high coverage, paired-end reads</li>
-  <li>mapping TF binding site/location of modified histones: <a href="http://en.wikipedia.org/wiki/Chromatin_immunoprecipitation">ChIP</a>, short reads</li>
-  <li>DNase-seq: limited to only 20bp of informative sequence</li>
-</ul>
-
-<p>Different error characteristics: </p>
-
-<ul>
-  <li>Roche 454:insertion or deletion errors during homopolymer runs</li>
-  <li>ABI SOLiD &amp; Illumina/Solexa: errors toward the end of the read</li>
-</ul>
-
-<h4 id="alignment">Alignment</h4>
-
-<p>Alignment methods(tradeoff between speed and sensitivity):</p>
-
-<ul>
-  <li>hash table-based implementations</li>
-  <li>Burrows Wheeler transform(BWT)-based methods</li>
-</ul>
-
-<p>Alignment procedure:</p>
-
-<ol>
-  <li>heuristic techniques</li>
-  <li>accurate alignment alogrithms(Smith-Waterman)</li>
-</ol>
-
-<h5 id="hash-based-alignment-methods">Hash-based alignment methods</h5>
-
-<p>Sepecially for short reads. methods include:</p>
-
-<ul>
-  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=18714091&amp;dopt=Abstract">MAQ</a>:
-  From the first 28 bp of the read, MAQ program builds 6 hash tables corresponding 
-  to seeds of (length = 8, weight = 4). scans the reference genome against these 
-  hash tables. This ensures that all hits with 2 mismatches can be found. 20 hash 
-  tables required if get all 3 mismatches.</li>
-  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=18227114&amp;dopt=Abstract">SOPA</a></li>
-  <li>Illumina’s unpublished ELAND algorithm</li>
-</ul>
-
-<p>These have recently been joined by:</p>
-
-<ul>
-  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=19461883&amp;dopt=Abstract">SHRiMP</a>:
-  use a <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=16597241&amp;dopt=Abstract">q-gram</a> approach, (require mutiple sapced seeds per read</li>
-  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=18684737&amp;dopt=Abstract">ZOOM</a>:
-  manually constructed spaced seeds of weight 14 to enable the detection of up to 4    mismatches in 50-bp reads</li>
-  <li><a href="http://genome.ucla.edu/bfast/">BFAST</a></li>
-  <li><a href="http://bioinformatics.bc.edu/marthlab/Mosaik/">MOSAIK</a>:
-  hashes all positions in the reference genome and uses a ‘jump database’ to 
-  efficiently locate information in the hash table and thus reduces memory 
-  requirements by approximately two-thirds over a naive implementation.</li>
-</ul>
-
-<h5 id="burrows-wheeler-transform-methods">Burrows-Wheeler Transform methods</h5>
-
-<p>use the FM index data structure, retains the suffix array’s ability for rapid subsequence
-search. Much faster than their hash-based counterparts at the same sensitivity level.</p>
-
-<ol>
-  <li>the sequence order of the reference genome is modified using the BWT(reversible)</li>
-  <li>the final index is created; it is then used for rapid read placement on the
-genome(memory-intensive)</li>
-</ol>
-
-<p>softwares:</p>
-
-<ul>
-  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=19261174&amp;dopt=Abstract">BOWTIE</a>:
-  Reported 30-fold speed increase over hash-based MAQ</li>
-  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=19451168&amp;dopt=Abstract">BWA</a></li>
-  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=19497933&amp;dopt=Abstract">SOAP2</a></li>
-</ul>
-
-<h4 id="assembly">Assembly</h4>
-
-<p><img src="http://bingw.github.com/images/paul_alignment.png" alt="de Bruijn graph" /></p>
-
-<ol>
-  <li>Sequence at top represents the genome, which is then sampled using shotgun sequencing in base space with 7-bp reads.</li>
-  <li>the k-mers in the reads (4-mers in this example) are collected into nodes and the coverage at each node is recorded.</li>
-  <li>he graph is simplified to combine nodes that are associated with the continuous linear stretches into single, larger nodes of various k-mer sizes.</li>
-  <li>error correction removes the tips and bubbles that result from sequencing errors and creates a final graph structure that accurately and completely describes in the original genome sequence.</li>
-</ol>
-
-<p>softwares:</p>
-
-<ul>
-  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=17908823&amp;dopt=Abstract">SHARCGS</a></li>
-  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=17893086&amp;dopt=Abstract">VCAKE</a></li>
-  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=18349386&amp;dopt=Abstract">VELVET</a></li>
-  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=18083777&amp;dopt=Abstract">EULER-SR</a></li>
-  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=18332092&amp;dopt=Abstract">EDENA</a></li>
-  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=19251739&amp;dopt=Abstract">ABySS</a></li>
-  <li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=npg&amp;cmd=Retrieve&amp;db=PubMed&amp;list_uids=18340039&amp;dopt=Abstract">ALLPATHS</a></li>
-</ul>
-
-<h4 id="disscusion">Disscusion</h4>
-
-<p>List of sequence alignment software: <a href="http://en.wikipedia.org/wiki/List_of_sequence_alignment_software">wiki</a>, <a href="http://seqanswers.com/forums/showthread.php?t=43">SEQanswers</a></p>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
+    
+      <a class="prev" href="/blog/page/2/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
@@ -938,6 +936,10 @@ genome(memory-intensive)</li>
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/09/18/colorful-python/">让你的python亮起来</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/09/17/variant-discovery-using-ngs/">Variant discovery using NGS</a>
@@ -953,10 +955,6 @@ genome(memory-intensive)</li>
     
       <li class="post">
         <a href="/blog/2012/09/13/kramdown-syntax/">Kramdown Syntax</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/09/13/evolution-seminar/">evolution seminar</a>
       </li>
     
   </ul>

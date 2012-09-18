@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: python | Bing & KK]]></title>
+  <link href="http://BingW.github.com/blog/categories/python/atom.xml" rel="self"/>
+  <link href="http://BingW.github.com/"/>
+  <updated>2012-09-18T12:49:44-05:00</updated>
+  <id>http://BingW.github.com/</id>
+  <author>
+    <name><![CDATA[BingW]]></name>
+    <email><![CDATA[toaya.kase@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[让你的python亮起来]]></title>
+    <link href="http://BingW.github.com/blog/2012/09/18/colorful-python/"/>
+    <updated>2012-09-18T12:12:00-05:00</updated>
+    <id>http://BingW.github.com/blog/2012/09/18/colorful-python</id>
+    <content type="html"><![CDATA[<p>昨晚写了个程序给老婆看，老婆表示很好，就是在terminal里面只有白色单调了点，所以最好要有颜色。然后求助万能的google未果，只好求助更加万能的<a href="http://stackoverflow.com/questions/287871/print-in-terminal-with-colors-using-python">stakeoverflow</a>，果然，顶得人不少，有157票赞同这个方案：</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">class</span> <span class="nc">bcolors</span><span class="p">:</span>
+</span><span class='line'>    <span class="n">HEADER</span> <span class="o">=</span> <span class="s">&#39;</span><span class="se">\033</span><span class="s">[95m&#39;</span> <span class="c">#pink</span>
+</span><span class='line'>    <span class="n">OKBLUE</span> <span class="o">=</span> <span class="s">&#39;</span><span class="se">\033</span><span class="s">[94m&#39;</span> <span class="c">#blue</span>
+</span><span class='line'>    <span class="n">OKGREEN</span> <span class="o">=</span> <span class="s">&#39;</span><span class="se">\033</span><span class="s">[92m&#39;</span> <span class="c">#green</span>
+</span><span class='line'>    <span class="n">WARNING</span> <span class="o">=</span> <span class="s">&#39;</span><span class="se">\033</span><span class="s">[93m&#39;</span> <span class="c">#yellow</span>
+</span><span class='line'>    <span class="n">FAIL</span> <span class="o">=</span> <span class="s">&#39;</span><span class="se">\033</span><span class="s">[91m&#39;</span> <span class="c">#red</span>
+</span><span class='line'>    <span class="n">ENDC</span> <span class="o">=</span> <span class="s">&#39;</span><span class="se">\033</span><span class="s">[0m&#39;</span> <span class="c">#white</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">print</span> <span class="n">bcolors</span><span class="o">.</span><span class="n">HEADER</span> <span class="o">+</span> <span class="s">&quot;Header&quot;</span> <span class="o">+</span> <span class="n">bcolors</span><span class="o">.</span><span class="n">ENDC</span>
+</span><span class='line'><span class="k">print</span> <span class="n">bcolors</span><span class="o">.</span><span class="n">OKBLUE</span> <span class="o">+</span> <span class="s">&quot;OK&quot;</span> <span class="o">+</span> <span class="n">bcolors</span><span class="o">.</span><span class="n">ENDC</span>
+</span><span class='line'><span class="k">print</span> <span class="n">bcolors</span><span class="o">.</span><span class="n">OKGREEN</span> <span class="o">+</span> <span class="s">&quot;another OK&quot;</span> <span class="o">+</span> <span class="n">bcolors</span><span class="o">.</span><span class="n">ENDC</span>
+</span><span class='line'><span class="k">print</span> <span class="n">bcolors</span><span class="o">.</span><span class="n">WARNING</span> <span class="o">+</span> <span class="s">&quot;Warning&quot;</span> <span class="o">+</span> <span class="n">bcolors</span><span class="o">.</span><span class="n">ENDC</span>
+</span><span class='line'><span class="k">print</span> <span class="n">bcolors</span><span class="o">.</span><span class="n">FAIL</span> <span class="o">+</span> <span class="s">&quot;Fail&quot;</span> <span class="o">+</span> <span class="n">bcolors</span><span class="o">.</span><span class="n">ENDC</span>
+</span><span class='line'><span class="k">print</span> <span class="n">bcolors</span><span class="o">.</span><span class="n">ENDC</span> <span class="o">+</span> <span class="s">&quot;Endc&quot;</span> <span class="o">+</span> <span class="n">bcolors</span><span class="o">.</span><span class="n">ENDC</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>运行结果：</p>
+
+<p><img src="http://bingw.github.com/images/color_python.png" alt="colorfor_python" /></p>
+
+<p>注意事项：</p>
+
+<ul>
+  <li>后面的bcolors.ENDC最好加上，不然你的terminal就成那个颜色了，用ENDC是因为个人的terminal字体本来就是白色的……</li>
+  <li>貌似只在macOS，linux系统上可行，windows上需要开启<a href="http://support.microsoft.com/kb/101875">ansi.sys</a></li>
+  <li>如果需要更复杂的特性，可以阅读python document的<a href="http://docs.python.org/howto/curses.html">curses</a></li>
+</ul>
+]]></content>
+  </entry>
+  
+</feed>
