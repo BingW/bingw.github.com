@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Kramdown Syntax - Bing & KK</title>
+  <title>Genome alignment and RNA-seq - Bing & KK</title>
   <meta name="author" content="BingW">
 
   
-  <meta name="description" content="Quick_Reference
-Syntax Features of origin Markdown中文 Head. use====or----under head.or use#or## or ### or #### … before head Quote. use &gt; infront &hellip;">
+  <meta name="description" content="Genome Alignment Pair-wise Align two genomes Example: MUMmer Multiple or complex samples and a reference genome All of one genome plus whatever parts &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@ Syntax Features of origin Markdown中文 Head. use====or----under head.or use#or
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://BingW.github.com/blog/2012/09/13/kramdown-syntax/">
+  <link rel="canonical" href="http://BingW.github.com/blog/2012/09/19/genome-alignment-and-rna-seq/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -99,7 +98,7 @@ Syntax Features of origin Markdown中文 Head. use====or----under head.or use#or
   
   <header>
     
-      <h1 class="entry-title">Kramdown Syntax</h1>
+      <h1 class="entry-title">Genome Alignment and RNA-seq</h1>
     
     
       <p class="meta">
@@ -115,42 +114,155 @@ Syntax Features of origin Markdown中文 Head. use====or----under head.or use#or
   
 
 
-<time datetime="2012-09-13T14:42:00-05:00" pubdate data-updated="true">Sep 13<span>th</span>, 2012</time>
+<time datetime="2012-09-19T14:26:00-05:00" pubdate data-updated="true">Sep 19<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p><a href="http://kramdown.rubyforge.org/quickref.html">Quick_Reference</a><br />
-<a href="http://kramdown.rubyforge.org/syntax.html">Syntax</a></p>
-
-<p>Features of origin <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a><a href="http://wowubuntu.com/markdown/basic.html">中文</a></p>
-
+<div class="entry-content"><h4 id="genome-alignment">Genome Alignment</h4>
 <ul>
-  <li>Head. use<code>====</code>or<code>----</code>under head.or use<code>#</code>or<code>##</code> or <code>###</code> or <code>####</code> … before head</li>
-  <li>Quote. use <code>&gt;</code> infront of quote brock</li>
-  <li>Emphasize. use <code>*</code> or <code>**</code> or <code>_</code> or <code>__</code> wrap text</li>
-  <li>List. use <code>* item</code>,<code>+ item</code>,<code>- item</code> or <code>1. item</code>,<code>2. item</code>,<code>3. item</code>start the line</li>
-  <li>Link. use <code>[example](link)</code> or <code>[example][index]</code> and put <code>[index]:link</code>in the
-end</li>
-  <li>Image. same as link, but put <code>!</code> in the front</li>
-  <li>Code in line. use <code>`code`</code> </li>
-  <li>Code in block. use 4 space in front</li>
+  <li>Pair-wise
+    <ul>
+      <li>Align two genomes</li>
+      <li>Example: MUMmer</li>
+    </ul>
+  </li>
+  <li>Multiple or complex samples and a reference genome
+    <ul>
+      <li>All of one genome plus whatever parts match from the other  genome(s)</li>
+      <li>Example: PIPs</li>
+    </ul>
+  </li>
+  <li>Multiple alignment
+    <ul>
+      <li>All of all the genomes</li>
+      <li>Example:  Mauve</li>
+    </ul>
+  </li>
 </ul>
 
-<p>Attracting features:</p>
+<h5 id="mummerhttpmummersourceforgenet"><a href="http://mummer.sourceforge.net/">MUMmer</a></h5>
+
+<p>Fast pair-wise comparison of draft or complete 
+genomes using nucleotide or 6-frame translated 
+sequences</p>
+
+<p>? Suffix Tree</p>
+
+<h5 id="percent-identity-plotpip">Percent Identity Plot(PIP)</h5>
+
+<p>quality draft</p>
+
+<h5 id="mauve-multiple-genome-aligner">Mauve multiple Genome Aligner</h5>
+
+<p>Progressive Mauve alignment</p>
+
+<h4 id="rna-seq-goals-and-computational-challenges">RNA-seq Goals and Computational Challenges</h4>
+
+<p>Goal:
++ Annotation
++ Quantification of genes
++ Quantification of isoforms</p>
+
+<p>Challenges:
++ Read mapping
++ Transcriptome reconstruction
++ Expression quantification</p>
+
+<h5 id="domain-specific-challenges">Domain-specific challenges</h5>
 
 <ul>
-  <li><a href="http://kramdown.rubyforge.org/quickref.html#footnotes">Footnote</a>. use <code>[^1]</code> in line and <code>[^1]</code> in the end.</li>
-  <li><a href="http://kramdown.rubyforge.org/quickref.html#abbreviations">Abbreviation</a>. use <code>*[term]: defination</code> in the end.</li>
-  <li><a href="http://kramdown.rubyforge.org/quickref.html#tables">Table</a>. same as <abbr title="reStructuredText">rst</abbr></li>
-  <li><a href="http://kramdown.rubyforge.org/quickref.html#inline-attributes">Span Style</a>. use <code>red{:style:"color:red"}</code> inline behind the term.</li>
-  <li><a href="http://kramdown.rubyforge.org/quickref.html#code-blocks">Code block</a>. use <code>~~~~</code> start, use longer <code>~~~~~~~</code> end.</li>
-  <li><a href="http://kramdown.rubyforge.org/quickref.html#horizontal-rules">Horizontal Rules</a>. use <code>* * * *</code> or <code>- - - -</code> or <code>--------</code></li>
-  <li><a href="http://kramdown.rubyforge.org/syntax.html#math-blocks">LaTeX</a>. use <code>$$</code> start, <code>$$</code> end</li>
+  <li>Eukaryotes
+    <ul>
+      <li>Processed and unprocessed RNAs in the sample</li>
+      <li>Quality of genome sequences</li>
+      <li>Quality of gene (and alternate splicing) annotations</li>
+      <li>Isoforms</li>
+    </ul>
+  </li>
+  <li>Prokaryotes
+    <ul>
+      <li>rRNA</li>
+      <li>Gene density</li>
+      <li>Operons</li>
+    </ul>
+  </li>
 </ul>
 
+<h5 id="popular-in-wisc">popular in WISC</h5>
+
+<ul>
+  <li>Bowtie, Tophat, Cufflinks, CuffDiff</li>
+  <li>RSEM, EBSeq</li>
+</ul>
+
+<h5 id="read-mapping">Read mapping</h5>
+
+<ul>
+  <li>Unspliced aligners: 
+    <ul>
+      <li>Seed based (Maq, Stampy)</li>
+      <li>Burrows Wheeler based (BWA, Bowtie, etc.)</li>
+      <li>How similar is your reference genome?</li>
+      <li>Best for mapping against cDNA databases from well characterized reference sequences</li>
+      <li>Can only recognize known exons and isoforms</li>
+    </ul>
+  </li>
+  <li>Spliced aligners:
+    <ul>
+      <li>Exon first (MapSplice, SpliceMap, TopHat)
+        <ul>
+          <li>unspliced alignment, split reads and repeat</li>
+          <li>Most efficient if relatively few reads span junctions</li>
+          <li>Can miss splice sites if reads map elsewhere in their entirety
+ – Seed and Extend (GSNAP, QPALMA)</li>
+          <li>Split all reads into seeds, map, merge and extend</li>
+          <li>Slower, but detect more splice junctions</li>
+          <li>Superior with polymorphic species</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="transcriptome-reconstruction-challenges">Transcriptome Reconstruction Challenges</h5>
+
+<ul>
+  <li>Genes vary in expression level, some may be represented by very few reads</li>
+  <li>Reads can come from either mature mRNA or a precursor</li>
+  <li>When there are multiple isoforms, how can you tell which gave rise to a particular read?  </li>
+</ul>
+
+<h5 id="genome-guided-vs-genome-independent-reconstruction">Genome-guided vs. Genome Independent Reconstruction</h5>
+
+<ul>
+  <li>Genome-guided reconstruction
+    <ul>
+      <li>Exon identification (G.mor.se)</li>
+      <li>Genome-guided assembly graph (CuffLinks, Scripture)</li>
+    </ul>
+  </li>
+  <li>Performance varies with the expression level</li>
+</ul>
+
+<h5 id="qunantifcation-overview">Qunantifcation overview</h5>
+
+<ul>
+  <li><strong>TODO</strong> fig</li>
+</ul>
+
+<h5 id="normalization">Normalization</h5>
+
+<ul>
+  <li>Genes vary in length - with random fragmentation, long genes are expected to have more reads than short genes expressed at the same level</li>
+  <li>Sequence “runs”/ experiments differ in total number of reads collected</li>
+  <li>RPKM = Reads per kilobase of transcript per million mapped reads (FPKM = fragments…)</li>
+  <li>Many other more sophisticated normalization methods</li>
+</ul>
+
+<p>`</p>
 </div>
 
 
@@ -173,12 +285,12 @@ end</li>
   
 
 
-<time datetime="2012-09-13T14:42:00-05:00" pubdate data-updated="true">Sep 13<span>th</span>, 2012</time>
+<time datetime="2012-09-19T14:26:00-05:00" pubdate data-updated="true">Sep 19<span>th</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/markdown/'>markdown</a>
+    <a class='category' href='/blog/categories/bioinfo/'>Bioinfo</a>, <a class='category' href='/blog/categories/gen875/'>Gen875</a>
   
 </span>
 
@@ -194,10 +306,10 @@ end</li>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/09/13/evolution-seminar/" title="Previous Post: evolution seminar">&laquo; evolution seminar</a>
+        <a class="basic-alignment left" href="/blog/2012/09/18/colorful-python/" title="Previous Post: 让你的python亮起来">&laquo; 让你的python亮起来</a>
       
       
-        <a class="basic-alignment right" href="/blog/2012/09/13/yaml-format/" title="Next Post: YAML Format">YAML Format &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2012/09/20/biochem-note-1/" title="Next Post: biochem note 1">biochem note 1 &raquo;</a>
       
     </p>
   </footer>

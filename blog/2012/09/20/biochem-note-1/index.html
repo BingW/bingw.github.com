@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Devin's Pipeline - Bing & KK</title>
+  <title>biochem note 1 - Bing & KK</title>
   <meta name="author" content="BingW">
 
   
-  <meta name="description" content="HMMER 1.8.4 -&gt; detect high scoring matches to (an HMM created from an alignment of S.cerevisiae introns and flanking sequences.) Generated all &hellip;">
+  <meta name="description" content="
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://BingW.github.com/blog/2012/09/11/devin-pipeline/">
+  <link rel="canonical" href="http://BingW.github.com/blog/2012/09/20/biochem-note-1/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -98,7 +99,7 @@
   
   <header>
     
-      <h1 class="entry-title">Devin's Pipeline</h1>
+      <h1 class="entry-title">Biochem Note 1</h1>
     
     
       <p class="meta">
@@ -114,74 +115,14 @@
   
 
 
-<time datetime="2012-09-11T13:11:00-05:00" pubdate data-updated="true">Sep 11<span>th</span>, 2012</time>
+<time datetime="2012-09-20T17:07:00-05:00" pubdate data-updated="true">Sep 20<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><ol>
-  <li>
-    <p><strong>HMMER 1.8.4</strong> -&gt; detect high scoring matches to 
-(an HMM created from an alignment of S.cerevisiae introns and flanking sequences.)</p>
-  </li>
-  <li>
-    <p>Generated all ORFs above a context-dependent minimum size (60 bp at contigs ends and intron 
-splice-sites, 300 bp at other locations), combined these with the putative splice-sites and 
-selected the most upstream ATG as the putative start codon.</p>
-  </li>
-  <li>
-    <p>Retained only possible gene models longer than 300 bp.</p>
-  </li>
-  <li>
-    <p>Potential ORFs that spanned high-scoring matches to the splice site model were represented 
-by multiple alternative gene models.</p>
-  </li>
-  <li>
-    <p>At each locus, we aligned alternative models to the best available homolog (typically from 
-S. cerevisiae) using <strong>Exonerate</strong> (Slater and Birney 2005) (-model affine:global -exhaustive 1 -bestn 1)
-and selected the model with the highest score.</p>
-  </li>
-  <li>Sought positive evidence for all remaining gene models by <strong>BLAST</strong> (Altschul et al. 1997) against a 
-local database of:
-    <ul>
-      <li>yeast proteins assembled from completely sequenced yeast genomes (Wood et al. 2002; Cliften et al. 2003
- ; Dujon et al. 2004; Kellis et al. 2004; Souciet et al. 2009), </li>
-      <li>the NCBI nr protein database</li>
-      <li>S. cerevisiae Ty and LTR sequences downloaded from Saccharomyces Genome Database (Engel et al. 2010) 
- (SGD, http:// www.yeastgenome.org)</li>
-    </ul>
-  </li>
-  <li>
-    <p>Use HMMER3 (Eddy 2009) to search our gene models against a database of 4704 protein HMMs derived 
-from the Yeast Gene Order Browser (Byrne and Wolfe 2006) (YGOB, http://wolfe.gen.tcd.ie/ygob).</p>
-  </li>
-  <li>
-    <p>In order to recover small genes or rapidly evolving genes, we subjected all presumed intergenic 
-regions to low stringency BLAST searches against our local database of yeast proteins and searched
-genomic regions predicted by synteny to contain YGOB matches with our YGOB-HMM library.</p>
-  </li>
-  <li>
-    <p>To detect potential novel genes, we used linear discriminant analysis to assign ORFs lacking 
-homology to genes in the YGOB or yeast ortholog databases a “coding probability” based on whether 
-their codon usage frequencies more closely resembled confirmed protein-coding genes or confirmed 
-intergenic regions.</p>
-  </li>
-  <li>
-    <p>Eliminated poorly supported gene models that overlapped well-supported models and merged
-neighboring models that were likely to be fragments of the same gene.</p>
-  </li>
-  <li>
-    <p>The fragmented gene models were typically created by scaffold gaps or frameshifts
-(either real or due to sequencing errors).</p>
-  </li>
-  <li>
-    <p>The remaining models were stratified according to the quality of the supporting evidence and 
-comprised our initial protein-coding gene set.</p>
-  </li>
-  <li>We used <strong>tRNA-ScanSE</strong> to identify tRNA genes (Lowe and Eddy 1997).</li>
-</ol>
+<div class="entry-content">
 </div>
 
 
@@ -204,8 +145,14 @@ comprised our initial protein-coding gene set.</p>
   
 
 
-<time datetime="2012-09-11T13:11:00-05:00" pubdate data-updated="true">Sep 11<span>th</span>, 2012</time>
+<time datetime="2012-09-20T17:07:00-05:00" pubdate data-updated="true">Sep 20<span>th</span>, 2012</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/biochem/'>biochem</a>
+  
+</span>
 
 
     </p>
@@ -219,10 +166,10 @@ comprised our initial protein-coding gene set.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/09/10/short-read-sequencing/" title="Previous Post: Short-read sequencing">&laquo; Short-read sequencing</a>
+        <a class="basic-alignment left" href="/blog/2012/09/19/genome-alignment-and-rna-seq/" title="Previous Post: Genome alignment and RNA-seq">&laquo; Genome alignment and RNA-seq</a>
       
       
-        <a class="basic-alignment right" href="/blog/2012/09/12/short-read-mapping/" title="Next Post: Short-read mapping">Short-read mapping &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2012/09/24/structural-functional-annotation/" title="Next Post: structural functional annotation">structural functional annotation &raquo;</a>
       
     </p>
   </footer>
@@ -237,23 +184,23 @@ comprised our initial protein-coding gene set.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/09/24/structural-functional-annotation/">structural functional annotation</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/09/20/biochem-note-1/">biochem note 1</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/09/19/genome-alignment-and-rna-seq/">Genome alignment and RNA-seq</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/09/18/colorful-python/">让你的python亮起来</a>
       </li>
     
       <li class="post">
         <a href="/blog/2012/09/17/variant-discovery-using-ngs/">Variant discovery using NGS</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/09/17/depristo-variationdiscovery/">DePristo_VariationDiscovery</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/09/13/yaml-format/">YAML Format</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/09/13/kramdown-syntax/">Kramdown Syntax</a>
       </li>
     
   </ul>

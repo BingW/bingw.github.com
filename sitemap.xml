@@ -2,19 +2,15 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://BingW.github.com/blog/2012/09/09/FlicekBirney2009-NGSReview/</loc>
-        <lastmod>2012-09-10T21:19:09-05:00</lastmod>
+        <lastmod>2012-09-18T17:13:27-05:00</lastmod>
     </url>
     <url>
         <loc>http://BingW.github.com/blog/2012/09/10/schatz2010-assemblyreview/</loc>
-        <lastmod>2012-09-10T21:19:10-05:00</lastmod>
+        <lastmod>2012-09-18T17:14:03-05:00</lastmod>
     </url>
     <url>
         <loc>http://BingW.github.com/blog/2012/09/10/short-read-sequencing/</loc>
-        <lastmod>2012-09-10T22:01:24-05:00</lastmod>
-    </url>
-    <url>
-        <loc>http://BingW.github.com/blog/2012/09/11/devin-pipeline/</loc>
-        <lastmod>2012-09-17T17:34:54-05:00</lastmod>
+        <lastmod>2012-09-18T17:14:20-05:00</lastmod>
     </url>
     <url>
         <loc>http://BingW.github.com/blog/2012/09/12/short-read-mapping/</loc>
@@ -26,7 +22,7 @@
     </url>
     <url>
         <loc>http://BingW.github.com/blog/2012/09/13/evolution-seminar/</loc>
-        <lastmod>2012-09-13T16:54:28-05:00</lastmod>
+        <lastmod>2012-09-18T17:15:25-05:00</lastmod>
     </url>
     <url>
         <loc>http://BingW.github.com/blog/2012/09/13/kramdown-syntax/</loc>
@@ -34,26 +30,38 @@
     </url>
     <url>
         <loc>http://BingW.github.com/blog/2012/09/13/yaml-format/</loc>
-        <lastmod>2012-09-13T16:45:32-05:00</lastmod>
+        <lastmod>2012-09-18T17:16:42-05:00</lastmod>
     </url>
     <url>
         <loc>http://BingW.github.com/blog/2012/09/17/depristo-variationdiscovery/</loc>
-        <lastmod>2012-09-17T17:19:49-05:00</lastmod>
+        <lastmod>2012-09-18T17:15:48-05:00</lastmod>
     </url>
     <url>
         <loc>http://BingW.github.com/blog/2012/09/17/variant-discovery-using-ngs/</loc>
-        <lastmod>2012-09-17T17:22:31-05:00</lastmod>
+        <lastmod>2012-09-18T17:16:10-05:00</lastmod>
     </url>
     <url>
         <loc>http://BingW.github.com/blog/2012/09/18/colorful-python/</loc>
         <lastmod>2012-09-18T12:45:10-05:00</lastmod>
     </url>
     <url>
+        <loc>http://BingW.github.com/blog/2012/09/19/genome-alignment-and-rna-seq/</loc>
+        <lastmod>2012-09-19T15:30:34-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://BingW.github.com/blog/2012/09/20/biochem-note-1/</loc>
+        <lastmod>2012-09-20T22:31:08-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://BingW.github.com/blog/2012/09/24/structural-functional-annotation/</loc>
+        <lastmod>2012-09-24T17:19:54-05:00</lastmod>
+    </url>
+    <url>
         <loc>http://BingW.github.com/blog/archives/</loc>
-        <lastmod>2012-09-18T12:45:10-05:00</lastmod>
+        <lastmod>2012-09-24T17:19:54-05:00</lastmod>
     </url>
     <url>
         <loc>http://BingW.github.com/</loc>
-        <lastmod>2012-09-18T12:45:10-05:00</lastmod>
+        <lastmod>2012-09-24T17:19:54-05:00</lastmod>
     </url>
 </urlset>

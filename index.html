@@ -9,20 +9,7 @@
   <meta name="author" content="BingW">
 
   
-  <meta name="description" content="昨晚写了个程序给老婆看，老婆表示很好，就是在terminal里面只有白色单调了点，所以最好要有颜色。然后求助万能的google未果，只好求助更加万能的stakeoverflow，果然，顶得人不少，有157票赞同这个方案： 1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14 class &hellip;">
+  <meta name="description" content="Annotaion Structural Annotation - undaries of features of interest (coding regions, regulatory elements, functional RNAs, etc). Ab initio - &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -108,6 +95,416 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/24/structural-functional-annotation/">Structural Functional Annotation</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-24T14:27:00-05:00" pubdate data-updated="true">Sep 24<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h4 id="annotaion">Annotaion</h4>
+
+<ul>
+  <li>Structural Annotation - undaries of features of 
+interest (coding regions, regulatory elements, functional 
+RNAs, etc). 
+    <ul>
+      <li>Ab initio - computationally predicted</li>
+      <li>Comparative - based on similarity to other genes or genomes</li>
+      <li>Experimental - transcript sequencing</li>
+    </ul>
+  </li>
+  <li>Functional Annotation - attaching meaning to the features 
+(names, product, activity, biological role, etc.)
+    <ul>
+      <li>Sequence homology</li>
+      <li>Structural similarity or structural features</li>
+      <li>Experimental data - gene or protein expression patterns</li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="errors">Errors</h5>
+
+<ul>
+  <li>Structural Annotation Errors
+    <ul>
+      <li>Wrong coordinates for the gene (exons, regulatory sites, 
+etc.)</li>
+      <li>False positives - not really a gene (etc.) at all</li>
+      <li>False negatives - true genes (etc.) missing</li>
+    </ul>
+  </li>
+  <li>Functional Annotation Errors
+    <ul>
+      <li>Overly specific function attributed</li>
+      <li>Wrong function attributed</li>
+      <li>True (known) function missed</li>
+      <li>Typos and misspellings</li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="quality">Quality</h5>
+
+<ul>
+  <li>
+    <p>Model organisms have content rich structural and 
+functional annotations developed and updated over 
+time combining <code>computational predictions</code> with 
+<code>experimental data</code> and <code>manual curation</code>.</p>
+  </li>
+  <li>
+    <p>Non-model organisms can be well annotated, but 
+many are not.</p>
+  </li>
+  <li>
+    <p>Standards for quality and content are still under 
+active development and adherence to the standards 
+is voluntary.</p>
+  </li>
+</ul>
+
+<h4 id="annotation-source">annotation source</h4>
+
+<ul>
+  <li>From an INSD (International Nucleotide 
+Sequence Database) provider
+    <ul>
+      <li>Genbank</li>
+      <li>ENA</li>
+      <li>DDBJ</li>
+    </ul>
+  </li>
+  <li>From a “Third Party” provider
+    <ul>
+      <li>GMOD</li>
+      <li>Other specialized databases</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="approaches">approaches</h4>
+
+<ul>
+  <li>Ab initio
+    <ul>
+      <li>Based exclusively on computational models</li>
+      <li>Error prone, esp. for eukaryotes</li>
+      <li>Generally requires manual clean up</li>
+    </ul>
+  </li>
+  <li>Comparative
+    <ul>
+      <li>Find genes corresponding to sequenced transcripts</li>
+      <li>Find the genes already predicted for a closely related 
+ organism</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="hmms-and-annotation">HMMs and annotation</h4>
+
+<ul>
+  <li>Markov models are used in many bioinformatics 
+applications</li>
+  <li>In particular, Hidden Markov Models are used for
+    <ul>
+      <li>Ab initio gene prediction</li>
+      <li>Ensemble methods for combining results of multiple gene 
+ prediction methods</li>
+      <li>Protein family similarity searches</li>
+      <li>Prediction of other types of features (such as regulatory 
+ binding sites)</li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="using-hmms">Using HMMs</h5>
+
+<ul>
+  <li>Given the parameters of the model, compute the probability 
+    of a particular output sequence. This problem is solved by the 
+    <em>forward algorithm</em>.</li>
+  <li>Given the parameters of the model, find the most likely 
+    sequence of hidden states that could have generated a given 
+    output sequence. This problem is solved by the <em>Viterbi 
+    algorithm</em>.</li>
+  <li>Given an output sequence or a set of such sequences, find the 
+    most likely set of state transition and output probabilities. In 
+    other words, train the parameters of the HMM given a 
+    dataset of sequences. This problem is solved by the <em>BaumWelch algorithm</em>.</li>
+</ul>
+
+<p><a href="http://www.nature.com/nbt/journal/v22/n10/full/nbt1004-1315.html">HMM introduction</a></p>
+
+<h5 id="models-and-training-sets">Models and Training Sets</h5>
+
+<ul>
+  <li>The parameters of models are determined from a 
+    training set of known positives and negatives, for 
+    example a set of known genes, and regions known to 
+    not encode genes.</li>
+  <li>Size and quality of training sets impacts the 
+    performance of models</li>
+  <li>Size and quality of training sets is related to the 
+    specific genome under investigation</li>
+</ul>
+
+<h4 id="the-gene-ontology-go">The Gene Ontology (GO)</h4>
+
+<ul>
+  <li>Goal = consistent annotation of gene products within 
+    and between organisms</li>
+  <li>Gene Ontology Consortium began as a collaboration 
+    among model organism dbs (FlyBase, SGD, MGD). 
+    Now includes larger number of members and 
+    interest groups</li>
+  <li>Ontology = A formal representation of concepts and 
+    the relationships among them</li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/20/biochem-note-1/">Biochem Note 1</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-20T17:07:00-05:00" pubdate data-updated="true">Sep 20<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/19/genome-alignment-and-rna-seq/">Genome Alignment and RNA-seq</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-19T14:26:00-05:00" pubdate data-updated="true">Sep 19<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h4 id="genome-alignment">Genome Alignment</h4>
+<ul>
+  <li>Pair-wise
+    <ul>
+      <li>Align two genomes</li>
+      <li>Example: MUMmer</li>
+    </ul>
+  </li>
+  <li>Multiple or complex samples and a reference genome
+    <ul>
+      <li>All of one genome plus whatever parts match from the other  genome(s)</li>
+      <li>Example: PIPs</li>
+    </ul>
+  </li>
+  <li>Multiple alignment
+    <ul>
+      <li>All of all the genomes</li>
+      <li>Example:  Mauve</li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="mummerhttpmummersourceforgenet"><a href="http://mummer.sourceforge.net/">MUMmer</a></h5>
+
+<p>Fast pair-wise comparison of draft or complete 
+genomes using nucleotide or 6-frame translated 
+sequences</p>
+
+<p>? Suffix Tree</p>
+
+<h5 id="percent-identity-plotpip">Percent Identity Plot(PIP)</h5>
+
+<p>quality draft</p>
+
+<h5 id="mauve-multiple-genome-aligner">Mauve multiple Genome Aligner</h5>
+
+<p>Progressive Mauve alignment</p>
+
+<h4 id="rna-seq-goals-and-computational-challenges">RNA-seq Goals and Computational Challenges</h4>
+
+<p>Goal:
++ Annotation
++ Quantification of genes
++ Quantification of isoforms</p>
+
+<p>Challenges:
++ Read mapping
++ Transcriptome reconstruction
++ Expression quantification</p>
+
+<h5 id="domain-specific-challenges">Domain-specific challenges</h5>
+
+<ul>
+  <li>Eukaryotes
+    <ul>
+      <li>Processed and unprocessed RNAs in the sample</li>
+      <li>Quality of genome sequences</li>
+      <li>Quality of gene (and alternate splicing) annotations</li>
+      <li>Isoforms</li>
+    </ul>
+  </li>
+  <li>Prokaryotes
+    <ul>
+      <li>rRNA</li>
+      <li>Gene density</li>
+      <li>Operons</li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="popular-in-wisc">popular in WISC</h5>
+
+<ul>
+  <li>Bowtie, Tophat, Cufflinks, CuffDiff</li>
+  <li>RSEM, EBSeq</li>
+</ul>
+
+<h5 id="read-mapping">Read mapping</h5>
+
+<ul>
+  <li>Unspliced aligners: 
+    <ul>
+      <li>Seed based (Maq, Stampy)</li>
+      <li>Burrows Wheeler based (BWA, Bowtie, etc.)</li>
+      <li>How similar is your reference genome?</li>
+      <li>Best for mapping against cDNA databases from well characterized reference sequences</li>
+      <li>Can only recognize known exons and isoforms</li>
+    </ul>
+  </li>
+  <li>Spliced aligners:
+    <ul>
+      <li>Exon first (MapSplice, SpliceMap, TopHat)
+        <ul>
+          <li>unspliced alignment, split reads and repeat</li>
+          <li>Most efficient if relatively few reads span junctions</li>
+          <li>Can miss splice sites if reads map elsewhere in their entirety
+ – Seed and Extend (GSNAP, QPALMA)</li>
+          <li>Split all reads into seeds, map, merge and extend</li>
+          <li>Slower, but detect more splice junctions</li>
+          <li>Superior with polymorphic species</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="transcriptome-reconstruction-challenges">Transcriptome Reconstruction Challenges</h5>
+
+<ul>
+  <li>Genes vary in expression level, some may be represented by very few reads</li>
+  <li>Reads can come from either mature mRNA or a precursor</li>
+  <li>When there are multiple isoforms, how can you tell which gave rise to a particular read?  </li>
+</ul>
+
+<h5 id="genome-guided-vs-genome-independent-reconstruction">Genome-guided vs. Genome Independent Reconstruction</h5>
+
+<ul>
+  <li>Genome-guided reconstruction
+    <ul>
+      <li>Exon identification (G.mor.se)</li>
+      <li>Genome-guided assembly graph (CuffLinks, Scripture)</li>
+    </ul>
+  </li>
+  <li>Performance varies with the expression level</li>
+</ul>
+
+<h5 id="qunantifcation-overview">Qunantifcation overview</h5>
+
+<ul>
+  <li><strong>TODO</strong> fig</li>
+</ul>
+
+<h5 id="normalization">Normalization</h5>
+
+<ul>
+  <li>Genes vary in length - with random fragmentation, long genes are expected to have more reads than short genes expressed at the same level</li>
+  <li>Sequence “runs”/ experiments differ in total number of reads collected</li>
+  <li>RPKM = Reads per kilobase of transcript per million mapped reads (FPKM = fragments…)</li>
+  <li>Many other more sophisticated normalization methods</li>
+</ul>
+
+<p>`</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -657,272 +1054,6 @@ place</li>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/12/short-read-mapping/">Short-read Mapping</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-12T14:27:00-05:00" pubdate data-updated="true">Sep 12<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>concept: TP FP FN TN</p>
-
-<p>When does alignment accuracy matter? tradeoff bettwen speed and accuracy.</p>
-
-<h4 id="bw-algorithms">BW-algorithms</h4>
-<p><img src="http://bingw.github.com/images/BW.png" alt="figure1" /></p>
-
-<h4 id="algorithms-and-speed-up">Algorithms and speed up</h4>
-
-<ul>
-  <li>use alignment refinement</li>
-</ul>
-
-<p><a href="http://bowtie-bio.sourceforge.net/bowtie2/index.shtml">Bowtie 2</a></p>
-
-<h4 id="dynamic-programming">Dynamic Programming</h4>
-<p><a href="http://en.wikipedia.org/wiki/Smith%E2%80%93Waterman_algorithm">Smith-Waterman</a></p>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/11/devin-pipeline/">Devin&#8217;s Pipeline</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-11T13:11:00-05:00" pubdate data-updated="true">Sep 11<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ol>
-  <li>
-    <p><strong>HMMER 1.8.4</strong> -&gt; detect high scoring matches to 
-(an HMM created from an alignment of S.cerevisiae introns and flanking sequences.)</p>
-  </li>
-  <li>
-    <p>Generated all ORFs above a context-dependent minimum size (60 bp at contigs ends and intron 
-splice-sites, 300 bp at other locations), combined these with the putative splice-sites and 
-selected the most upstream ATG as the putative start codon.</p>
-  </li>
-  <li>
-    <p>Retained only possible gene models longer than 300 bp.</p>
-  </li>
-  <li>
-    <p>Potential ORFs that spanned high-scoring matches to the splice site model were represented 
-by multiple alternative gene models.</p>
-  </li>
-  <li>
-    <p>At each locus, we aligned alternative models to the best available homolog (typically from 
-S. cerevisiae) using <strong>Exonerate</strong> (Slater and Birney 2005) (-model affine:global -exhaustive 1 -bestn 1)
-and selected the model with the highest score.</p>
-  </li>
-  <li>Sought positive evidence for all remaining gene models by <strong>BLAST</strong> (Altschul et al. 1997) against a 
-local database of:
-    <ul>
-      <li>yeast proteins assembled from completely sequenced yeast genomes (Wood et al. 2002; Cliften et al. 2003
- ; Dujon et al. 2004; Kellis et al. 2004; Souciet et al. 2009), </li>
-      <li>the NCBI nr protein database</li>
-      <li>S. cerevisiae Ty and LTR sequences downloaded from Saccharomyces Genome Database (Engel et al. 2010) 
- (SGD, http:// www.yeastgenome.org)</li>
-    </ul>
-  </li>
-  <li>
-    <p>Use HMMER3 (Eddy 2009) to search our gene models against a database of 4704 protein HMMs derived 
-from the Yeast Gene Order Browser (Byrne and Wolfe 2006) (YGOB, http://wolfe.gen.tcd.ie/ygob).</p>
-  </li>
-  <li>
-    <p>In order to recover small genes or rapidly evolving genes, we subjected all presumed intergenic 
-regions to low stringency BLAST searches against our local database of yeast proteins and searched
-genomic regions predicted by synteny to contain YGOB matches with our YGOB-HMM library.</p>
-  </li>
-  <li>
-    <p>To detect potential novel genes, we used linear discriminant analysis to assign ORFs lacking 
-homology to genes in the YGOB or yeast ortholog databases a “coding probability” based on whether 
-their codon usage frequencies more closely resembled confirmed protein-coding genes or confirmed 
-intergenic regions.</p>
-  </li>
-  <li>
-    <p>Eliminated poorly supported gene models that overlapped well-supported models and merged
-neighboring models that were likely to be fragments of the same gene.</p>
-  </li>
-  <li>
-    <p>The fragmented gene models were typically created by scaffold gaps or frameshifts
-(either real or due to sequencing errors).</p>
-  </li>
-  <li>
-    <p>The remaining models were stratified according to the quality of the supporting evidence and 
-comprised our initial protein-coding gene set.</p>
-  </li>
-  <li>We used <strong>tRNA-ScanSE</strong> to identify tRNA genes (Lowe and Eddy 1997).</li>
-</ol>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/10/short-read-sequencing/">Short-read Sequencing</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-10T14:23:00-05:00" pubdate data-updated="true">Sep 10<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3 id="sequencing-and-de-novo-assembly">Sequencing and de novo assembly</h3>
-
-<p><a href="http://www.ncbi.nlm.nih.gov/pubmed/21307932">Sequencing technology</a>
-<img src="http://bingw.github.com/images/short_read_sequencing_t1.png" alt="Sequencing technology" /></p>
-
-<p>concept: mate pair VS paired end</p>
-
-<h4 id="the-process">The Process:</h4>
-<ol>
-  <li>Choose sequencing platform</li>
-  <li>Make DNA</li>
-  <li>Prepare Library</li>
-  <li>sequence Run</li>
-  <li>primary Analysis Pipeline
- Converts image files (Tb) to sequences (100’s Gb).(inreversbale)</li>
-  <li>Obtain Sequence Reads</li>
-</ol>
-
-<h4 id="sequence-quality">Sequence quality:</h4>
-
-<p>Phred Score VS accuracy:</p>
-
-<ul>
-  <li>10 ==&gt; 90%</li>
-  <li>20 ==&gt; 99%</li>
-  <li>30 ==&gt; 99.9%</li>
-  <li>40 ==&gt; 99.99%</li>
-  <li>50 ==&gt; 99.999%</li>
-</ul>
-
-<h4 id="format">Format:</h4>
-
-<p>different identifier for phred<a href="http://en.wikipedia.org/wiki/FASTQ_format">wiki</a></p>
-
-<p>A software for this<a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a></p>
-
-<h4 id="genome-scale-sequence-analysis">Genome-scale Sequence Analysis</h4>
-
-<ul>
-  <li><strong>De nove assembly</strong></li>
-  <li>Templated assembly</li>
-  <li>Read mapping or alignment to a reference genome</li>
-</ul>
-
-<h4 id="assemblers">Assemblers</h4>
-
-<p>overlap graph assemblers:</p>
-
-<ul>
-  <li>Screen out known repeats and set them aside for later</li>
-  <li>Infer repetitiveness based on coverage</li>
-  <li>First assemble unambiguous overlaps, then resolve repeats using mate pairs</li>
-</ul>
-
-<p>De Bruijn K-mers assemblers problems:</p>
-
-<ul>
-  <li>Require large amount of memory to store graph</li>
-  <li>Not as easy to parallelize as overlap assemblers</li>
-</ul>
-
-<h4 id="how-many-clonesreads-do-we-need">How many clones/reads do we need?</h4>
-
-<ul>
-  <li>G = Genome Length</li>
-  <li>L = Sequence Read Length</li>
-  <li>N = Number of Sequences Collected</li>
-  <li>T = Number of Basepairs of Overlap Needed</li>
-</ul>
-
-<p>Number of Contigs = $N \cdot e^{-\frac{LN}{G} \cdot (1-\frac{T}{L})}$
-(<a href="http://www.ncbi.nlm.nih.gov/pubmed/3294162">LW prediction</a>)</p>
-
-<h4 id="gap-closure-strategies">Gap Closure Strategies</h4>
-
-<ul>
-  <li>Primer walk to sequence the rest of linking clones that span a scaffold gap</li>
-  <li>Primer walk off clones at the ends of contigs for which there is no linking information</li>
-  <li>PCR based on your best guess at contig order (comparison to other closely related genomes, predicted genes at the end of genomes, anything else you can come up with)</li>
-  <li>Combinatorial PCR with primers designed at the end of each contig</li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -938,23 +1069,23 @@ comprised our initial protein-coding gene set.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/09/24/structural-functional-annotation/">structural functional annotation</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/09/20/biochem-note-1/">biochem note 1</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/09/19/genome-alignment-and-rna-seq/">Genome alignment and RNA-seq</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/09/18/colorful-python/">让你的python亮起来</a>
       </li>
     
       <li class="post">
         <a href="/blog/2012/09/17/variant-discovery-using-ngs/">Variant discovery using NGS</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/09/17/depristo-variationdiscovery/">DePristo_VariationDiscovery</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/09/13/yaml-format/">YAML Format</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/09/13/kramdown-syntax/">Kramdown Syntax</a>
       </li>
     
   </ul>

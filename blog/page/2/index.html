@@ -9,7 +9,7 @@
   <meta name="author" content="BingW">
 
   
-  <meta name="description" content="Assembly of large genomes using second-generation sequencing Michael C. Schatz, Arthur L. Delcher and Steven L. Salzberg ">
+  <meta name="description" content="concept: TP FP FN TN When does alignment accuracy matter? tradeoff bettwen speed and accuracy. BW-algorithms Algorithms and speed up use alignment &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -95,6 +95,176 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/12/short-read-mapping/">Short-read Mapping</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-12T14:27:00-05:00" pubdate data-updated="true">Sep 12<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>concept: TP FP FN TN</p>
+
+<p>When does alignment accuracy matter? tradeoff bettwen speed and accuracy.</p>
+
+<h4 id="bw-algorithms">BW-algorithms</h4>
+<p><img src="http://bingw.github.com/images/BW.png" alt="figure1" /></p>
+
+<h4 id="algorithms-and-speed-up">Algorithms and speed up</h4>
+
+<ul>
+  <li>use alignment refinement</li>
+</ul>
+
+<p><a href="http://bowtie-bio.sourceforge.net/bowtie2/index.shtml">Bowtie 2</a></p>
+
+<h4 id="dynamic-programming">Dynamic Programming</h4>
+<p><a href="http://en.wikipedia.org/wiki/Smith%E2%80%93Waterman_algorithm">Smith-Waterman</a></p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/10/short-read-sequencing/">Short-read Sequencing</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-10T14:23:00-05:00" pubdate data-updated="true">Sep 10<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3 id="sequencing-and-de-novo-assembly">Sequencing and de novo assembly</h3>
+
+<p><a href="http://www.ncbi.nlm.nih.gov/pubmed/21307932">Sequencing technology</a>
+<img src="http://bingw.github.com/images/short_read_sequencing_t1.png" alt="Sequencing technology" /></p>
+
+<p>concept: mate pair VS paired end</p>
+
+<h4 id="the-process">The Process:</h4>
+<ol>
+  <li>Choose sequencing platform</li>
+  <li>Make DNA</li>
+  <li>Prepare Library</li>
+  <li>sequence Run</li>
+  <li>primary Analysis Pipeline
+ Converts image files (Tb) to sequences (100’s Gb).(inreversbale)</li>
+  <li>Obtain Sequence Reads</li>
+</ol>
+
+<h4 id="sequence-quality">Sequence quality:</h4>
+
+<p>Phred Score VS accuracy:</p>
+
+<ul>
+  <li>10 ==&gt; 90%</li>
+  <li>20 ==&gt; 99%</li>
+  <li>30 ==&gt; 99.9%</li>
+  <li>40 ==&gt; 99.99%</li>
+  <li>50 ==&gt; 99.999%</li>
+</ul>
+
+<h4 id="format">Format:</h4>
+
+<p>different identifier for phred<a href="http://en.wikipedia.org/wiki/FASTQ_format">wiki</a></p>
+
+<p>A software for this<a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a></p>
+
+<h4 id="genome-scale-sequence-analysis">Genome-scale Sequence Analysis</h4>
+
+<ul>
+  <li><strong>De nove assembly</strong></li>
+  <li>Templated assembly</li>
+  <li>Read mapping or alignment to a reference genome</li>
+</ul>
+
+<h4 id="assemblers">Assemblers</h4>
+
+<p>overlap graph assemblers:</p>
+
+<ul>
+  <li>Screen out known repeats and set them aside for later</li>
+  <li>Infer repetitiveness based on coverage</li>
+  <li>First assemble unambiguous overlaps, then resolve repeats using mate pairs</li>
+</ul>
+
+<p>De Bruijn K-mers assemblers problems:</p>
+
+<ul>
+  <li>Require large amount of memory to store graph</li>
+  <li>Not as easy to parallelize as overlap assemblers</li>
+</ul>
+
+<h4 id="how-many-clonesreads-do-we-need">How many clones/reads do we need?</h4>
+
+<ul>
+  <li>G = Genome Length</li>
+  <li>L = Sequence Read Length</li>
+  <li>N = Number of Sequences Collected</li>
+  <li>T = Number of Basepairs of Overlap Needed</li>
+</ul>
+
+<p>Number of Contigs = $N \cdot e^{-\frac{LN}{G} \cdot (1-\frac{T}{L})}$
+(<a href="http://www.ncbi.nlm.nih.gov/pubmed/3294162">LW prediction</a>)</p>
+
+<h4 id="gap-closure-strategies">Gap Closure Strategies</h4>
+
+<ul>
+  <li>Primer walk to sequence the rest of linking clones that span a scaffold gap</li>
+  <li>Primer walk off clones at the ends of contigs for which there is no linking information</li>
+  <li>PCR based on your best guess at contig order (comparison to other closely related genomes, predicted genes at the end of genomes, anything else you can come up with)</li>
+  <li>Combinatorial PCR with primers designed at the end of each contig</li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -302,23 +472,23 @@ genome(memory-intensive)</li>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/09/24/structural-functional-annotation/">structural functional annotation</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/09/20/biochem-note-1/">biochem note 1</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/09/19/genome-alignment-and-rna-seq/">Genome alignment and RNA-seq</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/09/18/colorful-python/">让你的python亮起来</a>
       </li>
     
       <li class="post">
         <a href="/blog/2012/09/17/variant-discovery-using-ngs/">Variant discovery using NGS</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/09/17/depristo-variationdiscovery/">DePristo_VariationDiscovery</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/09/13/yaml-format/">YAML Format</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/09/13/kramdown-syntax/">Kramdown Syntax</a>
       </li>
     
   </ul>

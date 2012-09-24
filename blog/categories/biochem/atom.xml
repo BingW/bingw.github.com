@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: biochem | Bing & KK]]></title>
+  <link href="http://BingW.github.com/blog/categories/biochem/atom.xml" rel="self"/>
+  <link href="http://BingW.github.com/"/>
+  <updated>2012-09-24T17:31:07-05:00</updated>
+  <id>http://BingW.github.com/</id>
+  <author>
+    <name><![CDATA[BingW]]></name>
+    <email><![CDATA[toaya.kase@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[biochem note 1]]></title>
+    <link href="http://BingW.github.com/blog/2012/09/20/biochem-note-1/"/>
+    <updated>2012-09-20T17:07:00-05:00</updated>
+    <id>http://BingW.github.com/blog/2012/09/20/biochem-note-1</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+</feed>
