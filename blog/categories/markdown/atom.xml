@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: markdown | Bing & KK]]></title>
-  <link href="http://BingW.github.com/blog/categories/markdown/atom.xml" rel="self"/>
-  <link href="http://BingW.github.com/"/>
-  <updated>2012-09-24T17:31:07-05:00</updated>
-  <id>http://BingW.github.com/</id>
+  <link href="http://bingw.github.com/blog/categories/markdown/atom.xml" rel="self"/>
+  <link href="http://bingw.github.com/"/>
+  <updated>2012-11-15T11:16:14-06:00</updated>
+  <id>http://bingw.github.com/</id>
   <author>
     <name><![CDATA[BingW]]></name>
     <email><![CDATA[toaya.kase@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Kramdown Syntax]]></title>
-    <link href="http://BingW.github.com/blog/2012/09/13/kramdown-syntax/"/>
+    <link href="http://bingw.github.com/blog/2012/09/13/kramdown-syntax/"/>
     <updated>2012-09-13T14:42:00-05:00</updated>
-    <id>http://BingW.github.com/blog/2012/09/13/kramdown-syntax</id>
+    <id>http://bingw.github.com/blog/2012/09/13/kramdown-syntax</id>
     <content type="html"><![CDATA[<p><a href="http://kramdown.rubyforge.org/quickref.html">Quick_Reference</a><br />
 <a href="http://kramdown.rubyforge.org/syntax.html">Syntax</a></p>
 

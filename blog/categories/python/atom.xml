@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: python | Bing & KK]]></title>
-  <link href="http://BingW.github.com/blog/categories/python/atom.xml" rel="self"/>
-  <link href="http://BingW.github.com/"/>
-  <updated>2012-09-24T17:31:07-05:00</updated>
-  <id>http://BingW.github.com/</id>
+  <link href="http://bingw.github.com/blog/categories/python/atom.xml" rel="self"/>
+  <link href="http://bingw.github.com/"/>
+  <updated>2012-11-15T11:16:14-06:00</updated>
+  <id>http://bingw.github.com/</id>
   <author>
     <name><![CDATA[BingW]]></name>
     <email><![CDATA[toaya.kase@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[让你的python亮起来]]></title>
-    <link href="http://BingW.github.com/blog/2012/09/18/colorful-python/"/>
+    <link href="http://bingw.github.com/blog/2012/09/18/colorful-python/"/>
     <updated>2012-09-18T12:12:00-05:00</updated>
-    <id>http://BingW.github.com/blog/2012/09/18/colorful-python</id>
+    <id>http://bingw.github.com/blog/2012/09/18/colorful-python</id>
     <content type="html"><![CDATA[<p>昨晚写了个程序给老婆看，老婆表示很好，就是在terminal里面只有白色单调了点，所以最好要有颜色。然后求助万能的google未果，只好求助更加万能的<a href="http://stackoverflow.com/questions/287871/print-in-terminal-with-colors-using-python">stakeoverflow</a>，果然，顶得人不少，有157票赞同这个方案：</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
